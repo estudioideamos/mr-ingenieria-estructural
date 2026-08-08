@@ -185,6 +185,18 @@
     return false;
   };
 
+  /* ---------------- Footer ambient glow (follows pointer) ---------------- */
+  const footer = $('#siteFooter');
+  if (footer && window.matchMedia('(pointer:fine)').matches) {
+    footer.addEventListener('mousemove', (e) => {
+      const rect = footer.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      footer.style.setProperty('--footer-x', `${x}%`);
+      footer.style.setProperty('--footer-y', `${y}%`);
+    });
+  }
+
   /* ---------------- Cursor dot (desktop pointer only) ---------------- */
   const cursor = $('#cursorDot');
   if (window.matchMedia('(pointer:fine)').matches && cursor) {

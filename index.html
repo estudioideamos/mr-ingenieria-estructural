@@ -584,35 +584,57 @@
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer class="site-footer">
+<footer class="site-footer" id="siteFooter">
+  <div class="footer-glow" id="footerGlow" aria-hidden="true"></div>
+  <div class="footer-ring" aria-hidden="true"></div>
+
+  <section class="footer-cta">
+    <div class="container footer-cta-inner">
+      <div data-reveal>
+        <p class="footer-eyebrow"><span></span>Ingeniería estructural para el futuro</p>
+        <h2>Tu próximo proyecto merece <em>cimientos sólidos.</em></h2>
+      </div>
+      <a href="#contacto" class="footer-orbit" aria-label="Ir a contacto" data-reveal data-reveal-delay="1">
+        <svg class="footer-orbit-ring" viewBox="0 0 190 190">
+          <defs><path id="footerOrbitPath" d="M 95,95 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/></defs>
+          <text><textPath href="#footerOrbitPath" startOffset="0%">CONTACTANOS · PRESUPUESTO SIN CARGO · MR INGENIERÍA ·</textPath></text>
+        </svg>
+        <span class="footer-orbit-core">
+          <svg viewBox="0 0 64 64" width="30" height="30"><use href="#mr-logo-mark"/></svg>
+          <small>Escribinos</small>
+        </span>
+      </a>
+    </div>
+  </section>
+
   <div class="container">
     <div class="footer-top">
-      <div class="footer-brand">
+      <div class="footer-brand" data-reveal>
         <a href="#inicio" class="brand">
           <svg class="mr-mark" viewBox="0 0 64 64"><use href="#mr-logo-mark"/></svg>
           <span class="brand-div"></span>
           <span class="brand-word"><b>MR Ingeniería</b><span>Estructural</span></span>
         </a>
-        <p>Estudio de ingeniería estructural especializado en hormigón armado y estructuras metálicas. Ni un cálculo de más, ni uno de menos.</p>
+        <p>Más de 12 años acompañando obras que necesitan un cálculo estructural preciso, sin sobrecostos innecesarios.</p>
         <div class="footer-social">
-          <a href="https://www.instagram.com/mr.ingenieria.estructural/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#ic-instagram"/></svg></a>
-          <a href="https://www.linkedin.com/company/mringenieria/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><use href="#ic-linkedin"/></svg></a>
-          <a href="https://wa.me/5491169633168" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#ic-whatsapp"/></svg></a>
+          <a href="https://www.instagram.com/mr.ingenieria.estructural/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-instagram"/></svg><span>Instagram</span></a>
+          <a href="https://www.linkedin.com/company/mringenieria/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-linkedin"/></svg><span>LinkedIn</span></a>
+          <a href="https://wa.me/5491169633168" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-whatsapp"/></svg><span>WhatsApp</span></a>
         </div>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-reveal data-reveal-delay="1">
         <h4>Navegación</h4>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#por-que">Por qué elegirnos</a></li>
         </ul>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-reveal data-reveal-delay="2">
         <h4>Servicios</h4>
         <ul>
           <li><a href="#servicios">Hormigón armado</a></li>
@@ -623,20 +645,28 @@
         </ul>
       </div>
 
-      <div class="footer-col">
-        <h4>Contacto</h4>
-        <ul>
-          <li><a href="tel:+541169633168">11-6963-3168</a></li>
-          <li><a href="mailto:info@mringenieria.com.ar">info@mringenieria.com.ar</a></li>
-          <li><a href="https://wa.me/5491169633168" target="_blank" rel="noopener">WhatsApp directo</a></li>
-          <li><span>Buenos Aires, Argentina</span></li>
-        </ul>
+      <div class="footer-contact" data-reveal data-reveal-delay="3">
+        <p class="footer-contact-label">Asesoramiento técnico</p>
+        <h3>¿Nos contás tu proyecto?</h3>
+        <a class="footer-whatsapp" href="https://wa.me/5491169633168" target="_blank" rel="noopener">
+          <span>Hablar por WhatsApp</span><i><svg viewBox="0 0 24 24" width="16" height="16"><use href="#ic-arrow"/></svg></i>
+        </a>
+        <p><a href="mailto:info@mringenieria.com.ar">info@mringenieria.com.ar</a></p>
+        <p>Buenos Aires, Argentina</p>
+        <p>Turnos y consultas por WhatsApp</p>
       </div>
+    </div>
+
+    <div class="footer-signature">
+      <div class="footer-signature-emblem">
+        <svg viewBox="0 0 64 64"><use href="#mr-logo-mark"/></svg>
+      </div>
+      <small>MR Ingeniería Estructural · Criterio y precisión</small>
     </div>
 
     <div class="footer-bottom">
       <span>© <span id="year"></span> MR Ingeniería Estructural. Todos los derechos reservados.</span>
-      <span>Sitio desarrollado por <a href="https://ideamos.com.ar" target="_blank" rel="noopener">Estudio Ideamos</a></span>
+      <span>Diseño &amp; desarrollo con <i aria-hidden="true">♥</i> por <a href="https://ideamos.com.ar" target="_blank" rel="noopener">Estudio Ideamos</a></span>
       <a href="#inicio" class="back-top" aria-label="Volver arriba"><svg viewBox="0 0 24 24"><use href="#ic-arrow-up"/></svg></a>
     </div>
   </div>
