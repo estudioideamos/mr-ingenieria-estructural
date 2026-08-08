@@ -238,7 +238,7 @@ svg{ display:block; }
   animation: spin 22s linear infinite;
 }
 .hero-badge-wrap{ position:relative; width:132px; height:132px; }
-.hero-badge svg text{ font-family: var(--f-body); font-size:8.6px; letter-spacing:.15em; fill: rgba(255,255,255,.85); text-transform:uppercase; }
+.hero-badge svg text{ font-family: var(--f-body); font-weight:700; font-size:9.6px; fill: rgba(255,255,255,.88); text-transform:uppercase; }
 .hero-badge-core{
   position:absolute; inset:0; margin:auto; width:56px; height:56px; border-radius:50%; background: var(--c-gold);
   display:flex; align-items:center; justify-content:center; animation: spin 22s linear infinite reverse;
@@ -520,7 +520,7 @@ svg{ display:block; }
 }
 .footer-orbit:hover{ background: var(--c-gold); border-color: var(--c-gold); transform: rotate(-6deg) scale(1.04); }
 .footer-orbit-ring{ position:absolute; inset:0; width:100%; height:100%; animation: spin 16s linear infinite; }
-.footer-orbit-ring text{ font-family: var(--f-body); font-size:8.6px; font-weight:700; letter-spacing:.14em; fill: rgba(255,255,255,.75); text-transform:uppercase; }
+.footer-orbit-ring text{ font-family: var(--f-body); font-size:10px; font-weight:700; fill: rgba(255,255,255,.8); text-transform:uppercase; }
 .footer-orbit:hover .footer-orbit-ring text{ fill: rgba(16,22,27,.8); }
 .footer-orbit-core{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:10px; color:#fff; transition: color .4s var(--ease); }
 .footer-orbit-core svg{ color:var(--c-gold); transition: color .4s var(--ease); }
