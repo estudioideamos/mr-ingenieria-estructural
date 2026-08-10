@@ -8,18 +8,19 @@
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------------- Active nav link (per-page, not scroll-based) ---------------- */
+  const currentPage = document.body.dataset.page;
+  if (currentPage) {
+    $$('.main-nav a[data-nav], .mobile-nav a[data-nav]').forEach(a => {
+      a.classList.toggle('active', a.dataset.nav === currentPage);
+    });
+  }
+
   /* ---------------- Header scroll state ---------------- */
   const header = $('#siteHeader');
   const onScroll = () => {
     if (window.scrollY > 40) header.classList.add('is-scrolled');
     else header.classList.remove('is-scrolled');
-
-    // active nav link
-    const sections = $$('main section[id]');
-    let current = sections[0]?.id;
-    const trigger = window.scrollY + window.innerHeight * 0.35;
-    sections.forEach(sec => { if (sec.offsetTop <= trigger) current = sec.id; });
-    $$('.main-nav a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${current}`));
 
     // scroll progress bar
     const doc = document.documentElement;
@@ -61,6 +62,19 @@
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
+  /* ---------------- Deep-link scroll on load (accounts for fixed header) ---------------- */
+  if (location.hash.length > 1) {
+    const target = $(location.hash);
+    if (target) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const top = target.getBoundingClientRect().top + window.scrollY - 96;
+          window.scrollTo({ top, behavior: 'auto' });
+        }, 60);
+      });
+    }
+  }
 
   /* ---------------- Scroll reveal ---------------- */
   const revealEls = $$('[data-reveal]');
@@ -160,6 +174,14 @@
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowRight') $('#lbNext').click();
     if (e.key === 'ArrowLeft') $('#lbPrev').click();
+  });
+
+  /* ---------------- Back to top (works regardless of href/page) ---------------- */
+  $$('.back-top').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   });
 
   /* ---------------- Contact form -> WhatsApp ---------------- */
