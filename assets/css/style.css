@@ -478,7 +478,7 @@ svg{ display:block; }
 .lightbox-next{ right: var(--gutter); }
 
 /* ============================= WHY US ============================= */
-.why-section{ position:relative; overflow:hidden; }
+.why-section{ position:relative; }
 .why-wrap{ position:relative; z-index:1; display:grid; grid-template-columns: .85fr 1.15fr; gap: clamp(40px,6vw,90px); align-items:start; }
 
 .why-media{ position:relative; border-radius: var(--radius-lg); overflow:hidden; aspect-ratio: .82; position:sticky; top:120px; }
