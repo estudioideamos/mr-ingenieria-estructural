@@ -17,7 +17,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=20260810c">
+<link rel="stylesheet" href="assets/css/style.css?v=20260810d">
 <link rel="canonical" href="https://estudioideamos.github.io/mr-ingenieria-estructural/contacto.html">
 </head>
 <body data-page="contacto">
@@ -184,59 +184,68 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="section section--cream">
+<section class="section section--cream contact-section">
+  <span class="contact-watermark" aria-hidden="true">Hablemos</span>
   <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Contacto</span>
-      <h2>Contanos sobre tu proyecto</h2>
-      <p>Escribinos y te respondemos con la mejor forma de avanzar: relevamiento, factibilidad o directamente el cálculo estructural.</p>
-    </div>
-
     <div class="contact-wrap">
       <div class="contact-card" data-reveal>
-        <h3>Hablemos</h3>
-        <p>Estamos para acompañar a arquitectos, constructoras, desarrolladores y particulares en cada etapa del proyecto estructural.</p>
+        <img src="assets/img/cta-obra.jpg" alt="" aria-hidden="true">
+        <div class="contact-card-shade"></div>
+        <div class="contact-card-body">
+          <span class="contact-badge"><span class="dot"></span>Respondemos el mismo día</span>
+          <h3>Hablemos de tu proyecto</h3>
+          <p>Estamos para acompañar a arquitectos, constructoras, desarrolladores y particulares en cada etapa del proyecto estructural.</p>
 
-        <a href="tel:+541169633168" class="contact-item">
-          <span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-phone"/></svg></span>
-          <span><small>Teléfono / WhatsApp</small><strong>11-6963-3168</strong></span>
-        </a>
-        <a href="mailto:info@mringenieria.com.ar" class="contact-item">
-          <span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-mail"/></svg></span>
-          <span><small>Email</small><strong>info@mringenieria.com.ar</strong></span>
-        </a>
-        <div class="contact-item">
-          <span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span>
-          <span><small>Zona de trabajo</small><strong>Buenos Aires y alrededores</strong></span>
-        </div>
+          <a href="tel:+541169633168" class="contact-item">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-phone"/></svg></span>
+            <span><small>Teléfono / WhatsApp</small><strong>11-6963-3168</strong></span>
+            <svg class="go" viewBox="0 0 24 24"><use href="#ic-arrow"/></svg>
+          </a>
+          <a href="mailto:info@mringenieria.com.ar" class="contact-item">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-mail"/></svg></span>
+            <span><small>Email</small><strong>info@mringenieria.com.ar</strong></span>
+            <svg class="go" viewBox="0 0 24 24"><use href="#ic-arrow"/></svg>
+          </a>
+          <div class="contact-item">
+            <span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span>
+            <span><small>Zona de trabajo</small><strong>Buenos Aires y alrededores</strong></span>
+          </div>
 
-        <div class="contact-social">
-          <a href="https://www.instagram.com/mr.ingenieria.estructural/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#ic-instagram"/></svg></a>
-          <a href="https://www.linkedin.com/company/mringenieria/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><use href="#ic-linkedin"/></svg></a>
-          <a href="https://wa.me/5491169633168" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#ic-whatsapp"/></svg></a>
+          <div class="contact-social">
+            <a href="https://www.instagram.com/mr.ingenieria.estructural/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#ic-instagram"/></svg></a>
+            <a href="https://www.linkedin.com/company/mringenieria/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><use href="#ic-linkedin"/></svg></a>
+            <a href="https://wa.me/5491169633168" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#ic-whatsapp"/></svg></a>
+          </div>
         </div>
       </div>
 
-      <form class="contact-form" data-reveal data-reveal-delay="1" action="https://wa.me/5491169633168" onsubmit="return sendToWhatsapp(event)">
-        <div class="form-row">
-          <div class="field"><label for="fname">Nombre</label><input id="fname" name="nombre" type="text" placeholder="Tu nombre" required></div>
-          <div class="field"><label for="fphone">Teléfono</label><input id="fphone" name="telefono" type="tel" placeholder="11 1234 5678"></div>
-        </div>
-        <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" placeholder="tu@email.com" required></div>
-        <div class="field">
-          <label for="ftype">Tipo de proyecto</label>
-          <select id="ftype" name="tipo">
-            <option>Vivienda / residencial</option>
-            <option>Comercial</option>
-            <option>Industrial</option>
-            <option>Refuerzo / patología estructural</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <div class="field"><label for="fmsg">Contanos sobre tu proyecto</label><textarea id="fmsg" name="mensaje" placeholder="Ubicación, superficie, etapa del proyecto..." required></textarea></div>
-        <button type="submit" class="btn btn--gold" style="width:100%">Enviar consulta</button>
-        <p class="form-note">Al enviar te redirigimos a WhatsApp con tu consulta pre-cargada para una respuesta más rápida.</p>
-      </form>
+      <div class="contact-form-card" data-reveal data-reveal-delay="1">
+        <span class="eyebrow">Contanos tu proyecto</span>
+        <h2>¿Qué estás por construir?</h2>
+        <form class="contact-form" action="https://wa.me/5491169633168" onsubmit="return sendToWhatsapp(event)">
+          <div class="form-row">
+            <div class="field"><label for="fname">Nombre</label><input id="fname" name="nombre" type="text" placeholder="Tu nombre" required></div>
+            <div class="field"><label for="fphone">Teléfono</label><input id="fphone" name="telefono" type="tel" placeholder="11 1234 5678"></div>
+          </div>
+          <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" placeholder="tu@email.com" required></div>
+          <div class="field">
+            <label for="ftype">Tipo de proyecto</label>
+            <select id="ftype" name="tipo">
+              <option>Vivienda / residencial</option>
+              <option>Comercial</option>
+              <option>Industrial</option>
+              <option>Refuerzo / patología estructural</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field"><label for="fmsg">Contanos sobre tu proyecto</label><textarea id="fmsg" name="mensaje" placeholder="Ubicación, superficie, etapa del proyecto..." required></textarea></div>
+          <button type="submit" class="btn btn--gold" style="width:100%">
+            Enviar consulta
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#ic-whatsapp"/></svg>
+          </button>
+          <p class="form-note">Al enviar te redirigimos a WhatsApp con tu consulta pre-cargada para una respuesta más rápida.</p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -261,8 +270,7 @@
           <text><textPath href="#footerOrbitPath" startOffset="0" textLength="439" lengthAdjust="spacing">CONTACTANOS · PRESUPUESTO SIN CARGO · ASESORAMIENTO TÉCNICO · MR INGENIERÍA ·</textPath></text>
         </svg>
         <span class="footer-orbit-core">
-          <svg viewBox="0 0 64 64" width="30" height="30"><use href="#mr-logo-mark"/></svg>
-          <small>Escribinos</small>
+          <svg viewBox="0 0 64 64" width="34" height="34"><use href="#mr-logo-mark"/></svg>
         </span>
       </a>
     </div>
@@ -349,6 +357,6 @@
   <span class="whatsapp-tip">Escribinos por WhatsApp</span>
 </a>
 
-<script src="assets/js/main.js?v=20260810c" defer></script>
+<script src="assets/js/main.js?v=20260810d" defer></script>
 </body>
 </html>
