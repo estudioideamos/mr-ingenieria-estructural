@@ -342,7 +342,7 @@ svg{ display:block; }
 .action-alt:hover i{ background: var(--c-ink); border-color: var(--c-ink); color:#fff; transform: rotate(-45deg); }
 
 .double-actions-light .action-main{ background:#fff; border-color:#fff; color: var(--c-ink); }
-.double-actions-light .action-main i{ background: rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.3); }
+.double-actions-light .action-main i{ background: var(--c-ink); color:#fff; }
 .double-actions-light .action-main:hover i{ background: var(--c-gold); color: var(--c-ink); }
 .double-actions-light .action-alt{ color:#fff; }
 .double-actions-light .action-alt i{ border-color: rgba(255,255,255,.35); color:#fff; }
@@ -380,6 +380,13 @@ svg{ display:block; }
   transform: translateY(-7px); border-color: transparent; box-shadow: 0 34px 64px -30px rgba(16,22,27,.24);
 }
 .about-stats > div:hover::before, .proj-stats > div:hover::before{ transform: scaleX(1); }
+.about-stats .stat-icon, .proj-stats .stat-icon{
+  display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%;
+  background: var(--c-cream-soft); margin-bottom:20px; transition: background .4s var(--ease), transform .4s var(--ease);
+}
+.about-stats .stat-icon svg, .proj-stats .stat-icon svg{ width:20px; height:20px; color: var(--c-teal); transition: color .4s var(--ease); }
+.about-stats > div:hover .stat-icon, .proj-stats > div:hover .stat-icon{ background: var(--c-teal); transform: rotate(-8deg) scale(1.08); }
+.about-stats > div:hover .stat-icon svg, .proj-stats > div:hover .stat-icon svg{ color:#fff; }
 .about-stats strong, .proj-stats strong{ font-family:var(--f-head); font-size: clamp(34px,3.4vw,48px); font-weight:600; letter-spacing:-.02em; color: var(--c-ink); display:block; line-height:1; }
 .about-stats strong sup, .proj-stats strong sup{ font-family:var(--f-mono); font-size:14px; font-weight:700; margin-left:2px; color: var(--c-gold); }
 .about-stats span, .proj-stats span{ display:block; margin-top:14px; font-size:13px; line-height:1.55; color: var(--c-body); }
