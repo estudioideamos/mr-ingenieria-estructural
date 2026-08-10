@@ -612,6 +612,43 @@ svg{ display:block; }
 /* progress bar */
 .scroll-progress{ position:fixed; top:0; left:0; height:3px; background: var(--c-gold); z-index:999; width:0%; }
 
+/* ============================= WHATSAPP FLOAT ============================= */
+.whatsapp-float{
+  position:fixed; right:26px; bottom:26px; z-index:220;
+  width:58px; height:58px; border-radius:50%; background:#25D366; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 14px 34px -8px rgba(37,211,102,.55);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), opacity .3s var(--ease);
+}
+.whatsapp-float svg{ width:27px; height:27px; color:#fff; }
+.whatsapp-float:hover{ transform: translateY(-4px) scale(1.06); box-shadow: 0 20px 44px -8px rgba(37,211,102,.65); }
+.whatsapp-float:active{ transform: translateY(-1px) scale(.98); }
+.whatsapp-ring{
+  position:absolute; inset:-6px; border-radius:50%; border:2px solid rgba(37,211,102,.55);
+  animation: wa-pulse 2.6s ease-out infinite; pointer-events:none;
+}
+@keyframes wa-pulse{
+  0%{ transform:scale(.88); opacity:.85; }
+  75%{ transform:scale(1.55); opacity:0; }
+  100%{ opacity:0; }
+}
+.whatsapp-tip{
+  position:absolute; right:72px; top:50%; transform: translateY(-50%) translateX(8px);
+  background: var(--c-ink); color:#fff; padding:9px 16px; border-radius:8px; font-size:13px; font-weight:700;
+  white-space:nowrap; opacity:0; pointer-events:none; transition: opacity .3s var(--ease), transform .3s var(--ease);
+}
+.whatsapp-tip::after{
+  content:''; position:absolute; right:-5px; top:50%; transform: translateY(-50%) rotate(45deg);
+  width:10px; height:10px; background: var(--c-ink);
+}
+.whatsapp-float:hover .whatsapp-tip{ opacity:1; transform: translateY(-50%) translateX(0); }
+body.nav-open .whatsapp-float{ opacity:0; pointer-events:none; }
+@media (max-width:760px){
+  .whatsapp-float{ width:52px; height:52px; right:16px; bottom:16px; }
+  .whatsapp-float svg{ width:24px; height:24px; }
+  .whatsapp-tip{ display:none; }
+}
+
 /* cursor dot (desktop only, decorative) */
 .cursor-dot{ position:fixed; top:0; left:0; width:10px; height:10px; border-radius:50%; background:var(--c-gold); pointer-events:none; z-index:600; transform: translate(-50%,-50%); mix-blend-mode:difference; opacity:0; transition: opacity .3s, width .3s, height .3s; }
 

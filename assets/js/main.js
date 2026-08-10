@@ -44,6 +44,7 @@
     const isOpen = open ?? !mobileNav.classList.contains('is-open');
     mobileNav.classList.toggle('is-open', isOpen);
     burger.classList.toggle('is-open', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
   };
   burger?.addEventListener('click', () => toggleNav());
