@@ -17,7 +17,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=20260810g">
+<link rel="stylesheet" href="assets/css/style.css?v=20260810h">
 <link rel="canonical" href="https://estudioideamos.github.io/mr-ingenieria-estructural/proyectos.html">
 </head>
 <body data-page="proyectos">
@@ -185,19 +185,48 @@
 </section>
 
 <!-- ============ PROJECTS ============ -->
-<section class="section section--cream">
+<section class="section section--cream proj-section">
+  <span class="section-watermark" aria-hidden="true">Obras</span>
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow">Proyectos</span>
-      <h2>Estructuras que ya están en pie</h2>
-      <p>Una selección de proyectos residenciales, institucionales e industriales calculados y documentados por nuestro estudio.</p>
     </div>
+  </div>
 
-    <div class="filters" data-reveal>
-      <button class="active" data-filter="all">Todos</button>
-      <button data-filter="residencial">Residencial</button>
-      <button data-filter="industrial">Industrial</button>
-      <button data-filter="institucional">Institucional</button>
+  <div class="container">
+    <div class="proj-spotlight" data-reveal>
+      <div class="proj-spotlight-media">
+        <img src="assets/img/proyectos/la-posta.jpg" alt="Vivienda La Posta Lote 269 — vista aérea" loading="eager">
+        <span class="proj-spotlight-tag">Proyecto destacado</span>
+      </div>
+      <div class="proj-spotlight-body">
+        <span class="eyebrow-mono on-dark"><span></span>Residencial</span>
+        <h3>La Posta — Lote 269</h3>
+        <p>Vivienda unifamiliar calculada en hormigón armado, desde la factibilidad estructural en anteproyecto hasta la documentación ejecutiva completa para obra.</p>
+        <div class="proj-spotlight-meta">
+          <div><small>Categoría</small><strong>Residencial</strong></div>
+          <div><small>Sistema</small><strong>Hormigón armado</strong></div>
+        </div>
+        <div class="double-actions double-actions-light">
+          <a class="action-main" href="#proj-la-posta"><span>Ver el proyecto</span><i>↗</i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container proj-stats" data-reveal data-reveal-delay="1">
+    <div><strong>9<sup>+</sup></strong><span>Proyectos calculados y documentados</span></div>
+    <div><strong>3</strong><span>Rubros: residencial, industrial e institucional</span></div>
+    <div><strong>12<sup>+</sup></strong><span>Años de trayectoria en obra</span></div>
+    <div><strong>100<sup>%</sup></strong><span>Con memoria de cálculo y planos</span></div>
+  </div>
+
+  <div class="container">
+    <div class="filters" data-reveal data-reveal-delay="2">
+      <button class="active" data-filter="all">Todos <i>9</i></button>
+      <button data-filter="residencial">Residencial <i>6</i></button>
+      <button data-filter="industrial">Industrial <i>2</i></button>
+      <button data-filter="institucional">Institucional <i>1</i></button>
     </div>
 
     <div class="proj-grid" id="projGrid">
@@ -216,7 +245,7 @@
         <div class="proj-overlay"><span class="proj-tag">Institucional</span><h3>Escuela Los Arrayanes</h3><span>Arq. Atencio · Estructura metálica</span></div>
       </article>
 
-      <article class="proj-card" data-cat="residencial" data-reveal data-reveal-delay="2"
+      <article class="proj-card" id="proj-la-posta" data-cat="residencial" data-reveal data-reveal-delay="2"
         data-full="assets/img/proyectos/la-posta.jpg" data-title="La Posta — Lote 269" data-meta="Residencial · Hormigón armado">
         <img src="assets/img/proyectos/la-posta.jpg" alt="Vivienda La Posta Lote 269 — vista aérea" loading="lazy">
         <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
@@ -410,6 +439,6 @@
   <span class="whatsapp-tip">Escribinos por WhatsApp</span>
 </a>
 
-<script src="assets/js/main.js?v=20260810g" defer></script>
+<script src="assets/js/main.js?v=20260810h" defer></script>
 </body>
 </html>
