@@ -181,6 +181,15 @@
     if (e.key === 'ArrowLeft') $('#lbPrev').click();
   });
 
+  /* ---------------- Footer accordion (mobile only, CSS-gated) ---------------- */
+  $$('.footer-col-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const col = btn.closest('.footer-col');
+      const isOpen = col.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
   /* ---------------- Back to top (works regardless of href/page) ---------------- */
   $$('.back-top').forEach(a => {
     a.addEventListener('click', (e) => {
