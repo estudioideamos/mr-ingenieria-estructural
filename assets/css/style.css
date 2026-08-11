@@ -370,6 +370,7 @@ svg{ display:block; }
 .about-stats, .proj-stats{
   display:grid; grid-template-columns: repeat(4,1fr); gap:18px; margin-top: 76px;
 }
+.proj-stats{ margin-bottom: 64px; }
 .about-stats > div, .proj-stats > div{
   position:relative; padding: 34px 26px 30px; border-radius: var(--radius-md); background: var(--c-white);
   border:1px solid var(--c-line); overflow:hidden;
