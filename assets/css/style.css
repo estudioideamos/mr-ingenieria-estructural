@@ -391,6 +391,31 @@ svg{ display:block; }
 .about-stats strong sup, .proj-stats strong sup{ font-family:var(--f-mono); font-size:14px; font-weight:700; margin-left:2px; color: var(--c-gold); }
 .about-stats > div > span:not(.stat-icon), .proj-stats > div > span:not(.stat-icon){ display:block; margin-top:14px; font-size:13px; line-height:1.55; color: var(--c-body); }
 
+/* ============================= WHY US TEASER (home) ============================= */
+.why-teaser-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:24px; margin-top:56px; }
+.why-teaser-card{
+  position:relative; padding: 38px 32px; border-radius: var(--radius-md); background: var(--c-white);
+  border:1px solid var(--c-line); overflow:hidden;
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s var(--ease);
+}
+.why-teaser-card::before{
+  content:''; position:absolute; top:0; left:0; width:100%; height:3px;
+  background: linear-gradient(90deg, var(--c-teal), var(--c-gold)); transform: scaleX(0); transform-origin:left;
+  transition: transform .5s var(--ease);
+}
+.why-teaser-card:hover{ transform: translateY(-7px); border-color: transparent; box-shadow: 0 34px 64px -30px rgba(16,22,27,.24); }
+.why-teaser-card:hover::before{ transform: scaleX(1); }
+.why-teaser-icon{
+  display:flex; align-items:center; justify-content:center; width:52px; height:52px; border-radius:50%;
+  background: var(--c-cream-soft); margin-bottom:22px; transition: background .4s var(--ease), transform .4s var(--ease);
+}
+.why-teaser-icon svg{ width:23px; height:23px; color: var(--c-teal); transition: color .4s var(--ease); }
+.why-teaser-card:hover .why-teaser-icon{ background: var(--c-teal); transform: rotate(-8deg) scale(1.08); }
+.why-teaser-card:hover .why-teaser-icon svg{ color:#fff; }
+.why-teaser-num{ display:block; font-family:var(--f-mono); font-size:12px; font-weight:700; color: var(--c-gold); letter-spacing:.08em; }
+.why-teaser-card h3{ font-size:19.5px; margin:10px 0 12px; }
+.why-teaser-card p{ font-size:14px; line-height:1.7; color: var(--c-body); }
+
 /* ============================= PHOTO BANNER (full-bleed) ============================= */
 .photo-banner{ position:relative; height: clamp(440px, 56vw, 640px); color:#fff; overflow:hidden; }
 .photo-banner img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
@@ -794,6 +819,7 @@ body.nav-open .whatsapp-float{ opacity:0; pointer-events:none; }
   .hero-stats{ flex-wrap:wrap; gap:20px; }
   .hero-stats div{ flex:1 1 40%; border-right:none; padding-right:0; }
   .svc-grid{ grid-template-columns: 1fr; }
+  .why-teaser-grid{ grid-template-columns: 1fr; }
   .proj-grid{ grid-template-columns: 1fr; }
   .process-grid{ grid-template-columns: 1fr; }
   .form-row{ grid-template-columns:1fr; }
