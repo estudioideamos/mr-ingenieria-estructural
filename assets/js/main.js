@@ -33,6 +33,10 @@
     if (heroImg && window.scrollY < window.innerHeight) {
       heroImg.style.transform = `scale(1.12) translateY(${window.scrollY * 0.12}px)`;
     }
+
+    // floating back-to-top visibility
+    const floatBtn = $('.back-top-float');
+    if (floatBtn) floatBtn.classList.toggle('is-visible', window.scrollY > 560);
   };
   document.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
