@@ -389,7 +389,7 @@ svg{ display:block; }
 .about-stats > div:hover .stat-icon svg, .proj-stats > div:hover .stat-icon svg{ color:#fff; }
 .about-stats strong, .proj-stats strong{ font-family:var(--f-head); font-size: clamp(34px,3.4vw,48px); font-weight:600; letter-spacing:-.02em; color: var(--c-ink); display:block; line-height:1; }
 .about-stats strong sup, .proj-stats strong sup{ font-family:var(--f-mono); font-size:14px; font-weight:700; margin-left:2px; color: var(--c-gold); }
-.about-stats span, .proj-stats span{ display:block; margin-top:14px; font-size:13px; line-height:1.55; color: var(--c-body); }
+.about-stats > div > span:not(.stat-icon), .proj-stats > div > span:not(.stat-icon){ display:block; margin-top:14px; font-size:13px; line-height:1.55; color: var(--c-body); }
 
 /* ============================= PHOTO BANNER (full-bleed) ============================= */
 .photo-banner{ position:relative; height: clamp(440px, 56vw, 640px); color:#fff; overflow:hidden; }
