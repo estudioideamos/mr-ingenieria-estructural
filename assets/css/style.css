@@ -228,11 +228,15 @@ svg{ display:block; }
 .hero-lead{ font-size:17.5px; line-height:1.75; color: rgba(255,255,255,.72); max-width:46ch; }
 .hero-actions{ display:flex; align-items:center; gap:30px; margin-top:30px; flex-wrap:wrap; }
 
-.hero-stats{ display:flex; gap:0; border-top:1px solid rgba(255,255,255,.15); margin-top:64px; padding-top:28px; }
-.hero-stats div{ flex:1; padding-right:24px; border-right:1px solid rgba(255,255,255,.12); }
-.hero-stats div:last-child{ border-right:none; }
-.hero-stats b{ display:block; font-family:var(--f-head); font-size: clamp(24px,3vw,38px); color:#fff; font-weight:600; }
-.hero-stats span{ display:block; font-size:12.5px; color: rgba(255,255,255,.55); margin-top:6px; letter-spacing:.03em; line-height:1.4; }
+.hero-stats{ display:grid; grid-template-columns: repeat(4,1fr); gap:14px; margin-top:60px; }
+.hero-stats > div{
+  padding: 24px 22px 22px; border-radius: var(--radius-md); background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: background .4s var(--ease), border-color .4s var(--ease), transform .4s var(--ease);
+}
+.hero-stats > div:hover{ background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.3); transform: translateY(-5px); }
+.hero-stats b{ display:block; font-family:var(--f-head); font-size: clamp(24px,2.4vw,32px); color:#fff; font-weight:600; line-height:1; }
+.hero-stats > div > span{ display:block; font-size:12.5px; color: rgba(255,255,255,.55); margin-top:12px; letter-spacing:.02em; line-height:1.5; padding-top:12px; border-top:1px solid rgba(255,255,255,.12); }
 
 .hero-badge{
   position:absolute; z-index:3; width:132px; height:132px; right: clamp(20px, 6vw, 120px); top: 150px;
@@ -269,25 +273,25 @@ svg{ display:block; }
 
 /* marquee under hero */
 .marquee-strip{
-  position:relative; background: var(--c-ink); overflow:hidden; padding: 28px 0;
-  border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08);
+  position:relative; background: var(--c-ink); overflow:hidden; padding: 15px 0;
+  border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06);
 }
 .marquee-track{
-  display:flex; width:max-content; animation: marquee 40s linear infinite;
+  display:flex; width:max-content; animation: marquee 46s linear infinite;
   mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
 }
 .marquee-strip:hover .marquee-track{ animation-play-state:paused; }
 .marquee-set{ display:flex; align-items:center; flex-shrink:0; }
 .mq-item{
-  font-family: var(--f-head); font-style:italic; font-weight:500; font-size:21px;
-  color: rgba(255,255,255,.42); white-space:nowrap; padding:0 30px; transition: color .3s var(--ease);
+  font-family: var(--f-mono); font-style:normal; font-weight:600; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color: rgba(255,255,255,.32); white-space:nowrap; padding:0 20px; transition: color .3s var(--ease);
 }
-.mq-item--accent{ font-style:normal; font-weight:700; color: var(--c-gold-light); letter-spacing:.01em; }
-.marquee-strip:hover .mq-item{ color: rgba(255,255,255,.62); }
-.marquee-strip:hover .mq-item--accent{ color: #fff; }
-.mq-sep{ display:flex; color: var(--c-gold); opacity:.55; flex-shrink:0; }
-.mq-sep svg{ width:6px; height:6px; }
+.mq-item--accent{ font-weight:700; color: rgba(230,196,142,.7); }
+.marquee-strip:hover .mq-item{ color: rgba(255,255,255,.5); }
+.marquee-strip:hover .mq-item--accent{ color: var(--c-gold-light); }
+.mq-sep{ display:flex; color: var(--c-gold); opacity:.4; flex-shrink:0; }
+.mq-sep svg{ width:3.5px; height:3.5px; }
 @keyframes marquee{ to{ transform: translateX(-50%); } }
 
 /* ============================= PAGE HERO (inner pages) ============================= */
@@ -785,6 +789,24 @@ body.nav-open .whatsapp-float{ opacity:0; pointer-events:none; }
   .whatsapp-tip{ display:none; }
 }
 
+/* ============================= BACK-TO-TOP FLOAT ============================= */
+.back-top-float{
+  position:fixed; left:26px; bottom:26px; z-index:220;
+  width:48px; height:48px; border-radius:50%; background: var(--c-ink); border:1px solid rgba(255,255,255,.18);
+  display:flex; align-items:center; justify-content:center; color:#fff;
+  box-shadow: 0 14px 30px -10px rgba(8,13,17,.55);
+  opacity:0; visibility:hidden; transform: translateY(14px);
+  transition: opacity .4s var(--ease), transform .4s var(--ease), visibility .4s, background .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease);
+}
+.back-top-float.is-visible{ opacity:1; visibility:visible; transform:none; }
+.back-top-float:hover{ background: var(--c-gold); border-color: var(--c-gold); color: var(--c-ink); transform: translateY(-4px); }
+.back-top-float svg{ width:17px; height:17px; }
+body.nav-open .back-top-float{ opacity:0; pointer-events:none; }
+@media (max-width:760px){
+  .back-top-float{ width:44px; height:44px; left:16px; bottom:16px; }
+  .back-top-float svg{ width:16px; height:16px; }
+}
+
 /* cursor dot (desktop only, decorative) */
 .cursor-dot{ position:fixed; top:0; left:0; width:10px; height:10px; border-radius:50%; background:var(--c-gold); pointer-events:none; z-index:600; transform: translate(-50%,-50%); mix-blend-mode:difference; opacity:0; transition: opacity .3s, width .3s, height .3s; }
 
@@ -793,6 +815,7 @@ body.nav-open .whatsapp-float{ opacity:0; pointer-events:none; }
   .main-nav, .header-phone{ display:none; }
   .burger{ display:flex; }
   .svc-grid{ grid-template-columns: repeat(2,1fr); }
+  .hero-stats{ grid-template-columns: repeat(2,1fr); }
   .proj-grid{ grid-template-columns: repeat(2,1fr); }
   .proj-spotlight{ grid-template-columns: 1fr; }
   .proj-spotlight-media{ min-height:320px; }
@@ -816,8 +839,7 @@ body.nav-open .whatsapp-float{ opacity:0; pointer-events:none; }
   .topbar-left span.hide-sm, .topbar .container > .topbar-left a:nth-child(2){ display:none; }
   .split, .why-wrap, .contact-wrap{ grid-template-columns:1fr; }
   .hero .split{ grid-template-columns:1fr; }
-  .hero-stats{ flex-wrap:wrap; gap:20px; }
-  .hero-stats div{ flex:1 1 40%; border-right:none; padding-right:0; }
+  .hero-stats{ grid-template-columns: repeat(2,1fr); gap:12px; }
   .svc-grid{ grid-template-columns: 1fr; }
   .why-teaser-grid{ grid-template-columns: 1fr; }
   .proj-grid{ grid-template-columns: 1fr; }
