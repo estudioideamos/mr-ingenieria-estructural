@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estudioideamos.github.io/mr-ingenieria-estructural/sitemap.xml
