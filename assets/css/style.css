@@ -877,7 +877,9 @@ body.nav-open .back-top-float{ opacity:0; pointer-events:none; }
   .contact-watermark, .section-watermark{ font-size: clamp(60px,20vw,120px); }
   .why-stat-badge{ flex-direction:column; align-items:flex-start; gap:6px; }
   .footer-top{ grid-template-columns: 1fr; row-gap:8px; }
-  .footer-cta-inner{ flex-direction:column; align-items:flex-start; gap:34px; }
+  .footer-cta-inner{ flex-direction:column; align-items:center; text-align:center; gap:34px; }
+  .footer-eyebrow{ justify-content:center; }
+  .footer-cta h2{ max-width:none; margin-inline:auto; }
   .footer-orbit{ width:120px; height:120px; align-self:center; }
   .footer-bottom{ grid-template-columns: 1fr; text-align:center; gap:16px; padding:28px 0; }
   .footer-copy, .footer-tagline{ text-align:center; }
