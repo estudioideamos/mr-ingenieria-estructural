@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20260811c">
+<link rel="stylesheet" href="assets/css/style.css?v=20260811d">
 <link rel="canonical" href="https://estudioideamos.github.io/mr-ingenieria-estructural/proyectos.html">
 </head>
 <body data-page="proyectos">
@@ -210,85 +210,277 @@
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow">Proyectos</span>
+      <h2 class="h2-nowrap">Cada obra, con su ficha técnica</h2>
+      <p>Destino, metodología constructiva y superficie de cada proyecto calculado y documentado por nuestro estudio.</p>
     </div>
   </div>
 
-  <div class="container">
-    <div class="filters" data-reveal data-reveal-delay="2">
-      <button class="active" data-filter="all">Todos <i>9</i></button>
-      <button data-filter="residencial">Residencial <i>7</i></button>
-      <button data-filter="industrial">Industrial <i>1</i></button>
-      <button data-filter="institucional">Institucional <i>1</i></button>
-    </div>
+  <div class="container pd-list">
 
-    <div class="proj-grid" id="projGrid">
+    <!-- 1. Depósito Astese -->
+    <article class="pd-block" id="proj-astese" data-reveal>
+      <div class="pd-media">
+        <div class="pd-gallery" data-project="astese">
+          <div class="pd-thumb-main" data-idx="0">
+            <img src="assets/img/proyectos/astese/1.jpg" alt="Depósito Astese — render exterior" loading="lazy">
+            <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+          </div>
+          <div class="pd-thumb-row">
+            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/astese/2.jpg" alt="Depósito Astese — modelo 3D de estructura" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/astese/3.jpg" alt="Depósito Astese — obra en construcción" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/astese/4.jpg" alt="Depósito Astese — obra en construcción" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow-mono"><span></span>Industrial</span>
+        <h3>Depósito Astese</h3>
+        <ul class="pd-specs">
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span><div><small>Destino</small><strong>Industrial</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 48 48"><use href="#ic-concrete"/></svg></span><div><small>Metodología constructiva</small><strong>Bases excéntricas. Columnas y vigas de hormigón armado, losetas premoldeadas. Cubierta de estructura metálica.</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span><div><small>Superficie construida</small><strong>600 m²</strong></div></li>
+        </ul>
+        <div class="pd-actions">
+          <a class="action-main" data-project="astese" data-idx="0"><span>Ver galería</span><i>↗</i></a>
+        </div>
+        <div class="pd-plans">
+          <a class="pd-plan-link" href="assets/docs/astese-plano-fundacion.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg>Planta de fundación (PDF)</a>
+          <a class="pd-plan-link" href="assets/docs/astese-plano-techo.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg>Estructura de techo (PDF)</a>
+        </div>
+      </div>
+    </article>
 
-      <article class="proj-card" data-cat="industrial" data-reveal
-        data-full="assets/img/proyectos/astese.jpg" data-title="Depósito Astese" data-meta="Industrial · Hormigón armado y techo de estructura metálica">
-        <img src="assets/img/proyectos/astese.jpg" alt="Depósito Astese — estructura metálica industrial" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Industrial</span><h3>Depósito Astese</h3><span>Hormigón armado y techo de estructura metálica</span></div>
-      </article>
+    <!-- 2. Proyecto Necochea -->
+    <article class="pd-block pd-block--reverse" id="proj-necochea" data-reveal>
+      <div class="pd-media">
+        <div class="pd-gallery" data-project="necochea">
+          <div class="pd-thumb-main" data-idx="0">
+            <img src="assets/img/proyectos/necochea/1.jpg" alt="Proyecto Necochea — render exterior" loading="lazy">
+            <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+          </div>
+          <div class="pd-thumb-row">
+            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/necochea/2.jpg" alt="Proyecto Necochea — render exterior" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/necochea/3.jpg" alt="Proyecto Necochea — modelo 3D de estructura" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow-mono"><span></span>Residencial</span>
+        <h3>Proyecto Necochea</h3>
+        <ul class="pd-specs">
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span><div><small>Destino</small><strong>Residencial</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 48 48"><use href="#ic-concrete"/></svg></span><div><small>Metodología constructiva</small><strong>Platea de hormigón armado. Columnas, vigas y losas de hormigón armado.</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span><div><small>Superficie construida</small><strong>300 m²</strong></div></li>
+        </ul>
+        <div class="pd-actions">
+          <a class="action-main" data-project="necochea" data-idx="0"><span>Ver galería</span><i>↗</i></a>
+        </div>
+        <div class="pd-plans">
+          <a class="pd-plan-link" href="assets/docs/necochea-plano-corte.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg>Corte estructural (PDF)</a>
+        </div>
+      </div>
+    </article>
 
-      <article class="proj-card" data-cat="institucional" data-reveal data-reveal-delay="1"
-        data-full="assets/img/proyectos/arrayanes.jpg" data-title="Escuela Los Arrayanes" data-meta="Institucional · Estructura metálica">
-        <img src="assets/img/proyectos/arrayanes.jpg" alt="Escuela Los Arrayanes — estructura metálica" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Institucional</span><h3>Escuela Los Arrayanes</h3><span>Estructura metálica</span></div>
-      </article>
+    <!-- 3. San Sebastián -->
+    <article class="pd-block" id="proj-san-sebastian" data-reveal>
+      <div class="pd-media">
+        <div class="pd-gallery" data-project="san-sebastian">
+          <div class="pd-thumb-main" data-idx="0">
+            <img src="assets/img/proyectos/san-sebastian/1.jpg" alt="San Sebastián Lote 237 — modelo 3D de la vivienda" loading="lazy">
+            <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+          </div>
+          <div class="pd-thumb-row">
+            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/san-sebastian/2.jpg" alt="San Sebastián Lote 237 — modelo 3D de estructura" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/san-sebastian/3.jpg" alt="San Sebastián Lote 237 — obra en construcción" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow-mono"><span></span>Residencial</span>
+        <h3>San Sebastián — Lote 237</h3>
+        <ul class="pd-specs">
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span><div><small>Destino</small><strong>Residencial</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 48 48"><use href="#ic-concrete"/></svg></span><div><small>Metodología constructiva</small><strong>Bases centradas. Columnas y vigas de hormigón armado. Losas de viguetas premoldeadas.</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span><div><small>Superficie construida</small><strong>300 m²</strong></div></li>
+        </ul>
+        <div class="pd-actions">
+          <a class="action-main" data-project="san-sebastian" data-idx="0"><span>Ver galería</span><i>↗</i></a>
+        </div>
+      </div>
+    </article>
 
-      <article class="proj-card" id="proj-la-posta" data-cat="residencial" data-reveal data-reveal-delay="2"
-        data-full="assets/img/proyectos/la-posta.jpg" data-title="La Posta — Lote 269" data-meta="Residencial · Hormigón armado y techo de estructura metálica">
-        <img src="assets/img/proyectos/la-posta.jpg" alt="Vivienda La Posta Lote 269 — vista aérea" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Residencial</span><h3>La Posta — Lote 269</h3><span>Hormigón armado y techo de estructura metálica</span></div>
-      </article>
+    <!-- 4. Aula Escuela Los Arrayanes -->
+    <article class="pd-block pd-block--reverse" id="proj-arrayanes" data-reveal>
+      <div class="pd-media">
+        <div class="pd-gallery" data-project="arrayanes">
+          <div class="pd-thumb-main" data-idx="0">
+            <img src="assets/img/proyectos/arrayanes/1.jpg" alt="Aula Escuela Los Arrayanes — modelo 3D" loading="lazy">
+            <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+          </div>
+          <div class="pd-thumb-row">
+            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/arrayanes/2.jpg" alt="Aula Escuela Los Arrayanes — modelo 3D" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/arrayanes/3.jpg" alt="Aula Escuela Los Arrayanes — estructura metálica" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="3">
+              <img src="assets/img/proyectos/arrayanes/4.jpg" alt="Aula Escuela Los Arrayanes — detalle de conexión metálica" loading="lazy">
+              <span class="pd-thumb-more">+3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow-mono"><span></span>Institucional</span>
+        <h3>Aula Escuela Los Arrayanes</h3>
+        <ul class="pd-specs">
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span><div><small>Destino</small><strong>Institucional</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 48 48"><use href="#ic-concrete"/></svg></span><div><small>Metodología constructiva</small><strong>Bases centradas y excéntricas de hormigón armado. Columnas y vigas de estructura metálica.</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span><div><small>Superficie construida</small><strong>50 m²</strong></div></li>
+        </ul>
+        <div class="pd-actions">
+          <a class="action-main" data-project="arrayanes" data-idx="0"><span>Ver galería</span><i>↗</i></a>
+        </div>
+      </div>
+    </article>
 
-      <article class="proj-card" data-cat="residencial" data-reveal
-        data-full="assets/img/proyectos/hds-60.jpg" data-title="HDS — Lote 60" data-meta="Residencial · Hormigón armado">
-        <img src="assets/img/proyectos/hds-60.jpg" alt="Vivienda HDS Lote 60" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Residencial</span><h3>HDS — Lote 60</h3><span>Hormigón armado</span></div>
-      </article>
+    <!-- 5. La Colina -->
+    <article class="pd-block" id="proj-la-colina" data-reveal>
+      <div class="pd-media">
+        <div class="pd-gallery" data-project="la-colina">
+          <div class="pd-thumb-main" data-idx="0">
+            <img src="assets/img/proyectos/la-colina/1.jpg" alt="La Colina Lote 197 — render exterior" loading="lazy">
+            <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+          </div>
+          <div class="pd-thumb-row">
+            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/la-colina/2.jpg" alt="La Colina Lote 197 — render patio interno" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/la-colina/3.jpg" alt="La Colina Lote 197 — render vista aérea" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/la-colina/4.jpg" alt="La Colina Lote 197 — modelo 3D de estructura" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow-mono"><span></span>Residencial</span>
+        <h3>La Colina — Lote 197</h3>
+        <ul class="pd-specs">
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span><div><small>Destino</small><strong>Residencial</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 48 48"><use href="#ic-concrete"/></svg></span><div><small>Metodología constructiva</small><strong>Platea de hormigón armado. Columnas y vigas de hormigón armado. Losas de viguetas premoldeadas.</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span><div><small>Superficie construida</small><strong>500 m²</strong></div></li>
+        </ul>
+        <div class="pd-actions">
+          <a class="action-main" data-project="la-colina" data-idx="0"><span>Ver galería</span><i>↗</i></a>
+        </div>
+        <div class="pd-plans">
+          <a class="pd-plan-link" href="assets/docs/la-colina-plano-fundacion.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg>Planta de fundación (PDF)</a>
+        </div>
+      </div>
+    </article>
 
-      <article class="proj-card" data-cat="residencial" data-reveal data-reveal-delay="1"
-        data-full="assets/img/proyectos/la-colina.jpg" data-title="La Colina — Lote 197" data-meta="Residencial · Arcucci · Hormigón armado">
-        <img src="assets/img/proyectos/la-colina.jpg" alt="Vivienda La Colina Lote 197 en construcción" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Residencial</span><h3>La Colina — Lote 197</h3><span>Arcucci · Hormigón armado</span></div>
-      </article>
+    <!-- 6. La Posta -->
+    <article class="pd-block pd-block--reverse" id="proj-la-posta" data-reveal>
+      <div class="pd-media">
+        <div class="pd-gallery" data-project="la-posta">
+          <div class="pd-thumb-main" data-idx="0">
+            <img src="assets/img/proyectos/la-posta/1.jpg" alt="La Posta Lote 269 — render frente" loading="lazy">
+            <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+          </div>
+          <div class="pd-thumb-row">
+            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/la-posta/2.jpg" alt="La Posta Lote 269 — render frente" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/la-posta/3.jpg" alt="La Posta Lote 269 — render vista aérea" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/la-posta/4.jpg" alt="La Posta Lote 269 — modelo 3D de estructura" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow-mono"><span></span>Residencial</span>
+        <h3>La Posta — Lote 269</h3>
+        <ul class="pd-specs">
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span><div><small>Destino</small><strong>Residencial</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 48 48"><use href="#ic-concrete"/></svg></span><div><small>Metodología constructiva</small><strong>Platea de hormigón armado. Columnas y vigas de hormigón armado. Losas de viguetas premoldeadas. Cubierta de estructura metálica.</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span><div><small>Superficie construida</small><strong>250 m²</strong></div></li>
+        </ul>
+        <div class="pd-actions">
+          <a class="action-main" data-project="la-posta" data-idx="0"><span>Ver galería</span><i>↗</i></a>
+        </div>
+      </div>
+    </article>
 
-      <article class="proj-card" data-cat="residencial" data-reveal data-reveal-delay="2"
-        data-full="assets/img/proyectos/nautico.jpg" data-title="Náutico — Lote 29" data-meta="Residencial · Hormigón armado">
-        <img src="assets/img/proyectos/nautico.jpg" alt="Vivienda Náutico Lote 29" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Residencial</span><h3>Náutico — Lote 29</h3><span>Hormigón armado</span></div>
-      </article>
+    <!-- 7. Náutico de Escobar -->
+    <article class="pd-block" id="proj-nautico" data-reveal>
+      <div class="pd-media">
+        <div class="pd-gallery" data-project="nautico">
+          <div class="pd-thumb-main" data-idx="0">
+            <img src="assets/img/proyectos/nautico/1.jpg" alt="Náutico de Escobar Lote 29 — render exterior" loading="lazy">
+            <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+          </div>
+          <div class="pd-thumb-row">
+            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/nautico/2.jpg" alt="Náutico de Escobar Lote 29 — render frente" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/nautico/3.jpg" alt="Náutico de Escobar Lote 29 — modelo 3D de estructura" loading="lazy"></div>
+            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/nautico/4.jpg" alt="Náutico de Escobar Lote 29 — modelo 3D de cubierta metálica" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow-mono"><span></span>Residencial</span>
+        <h3>Náutico de Escobar — Lote 29</h3>
+        <ul class="pd-specs">
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-pin"/></svg></span><div><small>Destino</small><strong>Residencial</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 48 48"><use href="#ic-concrete"/></svg></span><div><small>Metodología constructiva</small><strong>Platea con pilotines de hormigón armado. Columnas y vigas de hormigón armado. Losas de viguetas premoldeadas. Cubierta de estructura metálica.</strong></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span><div><small>Superficie construida</small><strong>200 m²</strong></div></li>
+        </ul>
+        <div class="pd-actions">
+          <a class="action-main" data-project="nautico" data-idx="0"><span>Ver galería</span><i>↗</i></a>
+        </div>
+      </div>
+    </article>
 
-      <article class="proj-card" data-cat="residencial" data-reveal
-        data-full="assets/img/proyectos/necochea.jpg" data-title="Proyecto Necochea" data-meta="Residencial · Hormigón armado">
-        <img src="assets/img/proyectos/necochea.jpg" alt="Proyecto Necochea — Arcucci" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Residencial</span><h3>Proyecto Necochea</h3><span>Hormigón armado</span></div>
-      </article>
-
-      <article class="proj-card" data-cat="residencial" data-reveal data-reveal-delay="1"
-        data-full="assets/img/proyectos/san-sebastian.jpg" data-title="San Sebastián — Lote 237" data-meta="Residencial · L. Marchi · Hormigón armado">
-        <img src="assets/img/proyectos/san-sebastian.jpg" alt="Modelo estructural San Sebastián Lote 237" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Residencial</span><h3>San Sebastián — Lote 237</h3><span>L. Marchi · Hormigón armado</span></div>
-      </article>
-
-      <article class="proj-card" data-cat="residencial" data-reveal data-reveal-delay="2"
-        data-full="assets/img/proyectos/hds-85.jpg" data-title="HDS — Lote 85" data-meta="Residencial · Alfred · Hormigón armado">
-        <img src="assets/img/proyectos/hds-85.jpg" alt="Vivienda HDS Lote 85 en construcción" loading="lazy">
-        <span class="proj-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
-        <div class="proj-overlay"><span class="proj-tag">Residencial</span><h3>HDS — Lote 85</h3><span>Alfred · Hormigón armado</span></div>
-      </article>
-
-    </div>
   </div>
 </section>
+
+<script>
+window.PROJECT_GALLERIES = {
+  astese: { title: "Depósito Astese", meta: "Industrial", images: [
+    { src: "assets/img/proyectos/astese/1.jpg", alt: "Depósito Astese — render exterior" },
+    { src: "assets/img/proyectos/astese/2.jpg", alt: "Depósito Astese — modelo 3D de estructura" },
+    { src: "assets/img/proyectos/astese/3.jpg", alt: "Depósito Astese — obra en construcción" },
+    { src: "assets/img/proyectos/astese/4.jpg", alt: "Depósito Astese — obra en construcción" }
+  ]},
+  necochea: { title: "Proyecto Necochea", meta: "Residencial", images: [
+    { src: "assets/img/proyectos/necochea/1.jpg", alt: "Proyecto Necochea — render exterior" },
+    { src: "assets/img/proyectos/necochea/2.jpg", alt: "Proyecto Necochea — render exterior" },
+    { src: "assets/img/proyectos/necochea/3.jpg", alt: "Proyecto Necochea — modelo 3D de estructura" }
+  ]},
+  "san-sebastian": { title: "San Sebastián — Lote 237", meta: "Residencial", images: [
+    { src: "assets/img/proyectos/san-sebastian/1.jpg", alt: "San Sebastián Lote 237 — modelo 3D de la vivienda" },
+    { src: "assets/img/proyectos/san-sebastian/2.jpg", alt: "San Sebastián Lote 237 — modelo 3D de estructura" },
+    { src: "assets/img/proyectos/san-sebastian/3.jpg", alt: "San Sebastián Lote 237 — obra en construcción" }
+  ]},
+  arrayanes: { title: "Aula Escuela Los Arrayanes", meta: "Institucional", images: [
+    { src: "assets/img/proyectos/arrayanes/1.jpg", alt: "Aula Escuela Los Arrayanes — modelo 3D" },
+    { src: "assets/img/proyectos/arrayanes/2.jpg", alt: "Aula Escuela Los Arrayanes — modelo 3D" },
+    { src: "assets/img/proyectos/arrayanes/3.jpg", alt: "Aula Escuela Los Arrayanes — estructura metálica" },
+    { src: "assets/img/proyectos/arrayanes/4.jpg", alt: "Aula Escuela Los Arrayanes — detalle de conexión metálica" },
+    { src: "assets/img/proyectos/arrayanes/5.jpg", alt: "Aula Escuela Los Arrayanes — despiece de estructura metálica" },
+    { src: "assets/img/proyectos/arrayanes/6.jpg", alt: "Aula Escuela Los Arrayanes — obra en construcción" },
+    { src: "assets/img/proyectos/arrayanes/7.jpg", alt: "Aula Escuela Los Arrayanes — obra en construcción" }
+  ]},
+  "la-colina": { title: "La Colina — Lote 197", meta: "Residencial", images: [
+    { src: "assets/img/proyectos/la-colina/1.jpg", alt: "La Colina Lote 197 — render exterior" },
+    { src: "assets/img/proyectos/la-colina/2.jpg", alt: "La Colina Lote 197 — render patio interno" },
+    { src: "assets/img/proyectos/la-colina/3.jpg", alt: "La Colina Lote 197 — render vista aérea" },
+    { src: "assets/img/proyectos/la-colina/4.jpg", alt: "La Colina Lote 197 — modelo 3D de estructura" }
+  ]},
+  "la-posta": { title: "La Posta — Lote 269", meta: "Residencial", images: [
+    { src: "assets/img/proyectos/la-posta/1.jpg", alt: "La Posta Lote 269 — render frente" },
+    { src: "assets/img/proyectos/la-posta/2.jpg", alt: "La Posta Lote 269 — render frente" },
+    { src: "assets/img/proyectos/la-posta/3.jpg", alt: "La Posta Lote 269 — render vista aérea" },
+    { src: "assets/img/proyectos/la-posta/4.jpg", alt: "La Posta Lote 269 — modelo 3D de estructura" }
+  ]},
+  nautico: { title: "Náutico de Escobar — Lote 29", meta: "Residencial", images: [
+    { src: "assets/img/proyectos/nautico/1.jpg", alt: "Náutico de Escobar Lote 29 — render exterior" },
+    { src: "assets/img/proyectos/nautico/2.jpg", alt: "Náutico de Escobar Lote 29 — render frente" },
+    { src: "assets/img/proyectos/nautico/3.jpg", alt: "Náutico de Escobar Lote 29 — modelo 3D de estructura" },
+    { src: "assets/img/proyectos/nautico/4.jpg", alt: "Náutico de Escobar Lote 29 — modelo 3D de cubierta metálica" }
+  ]}
+};
+</script>
 
 <!-- ============ CTA BANNER ============ -->
 <section class="cta-banner">
@@ -454,6 +646,6 @@
   <svg viewBox="0 0 24 24"><use href="#ic-arrow-up"/></svg>
 </a>
 
-<script src="assets/js/main.js?v=20260811c" defer></script>
+<script src="assets/js/main.js?v=20260811d" defer></script>
 </body>
 </html>

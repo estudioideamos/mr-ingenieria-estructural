@@ -140,40 +140,84 @@
     });
   });
 
-  /* ---------------- Lightbox ---------------- */
+  /* ---------------- Lightbox (simple card grid + per-project galleries) ---------------- */
   const lightbox = $('#lightbox');
   const lbImg = $('#lbImg');
   const lbTitle = $('#lbTitle');
   const lbMeta = $('#lbMeta');
   let lbIndex = 0;
   let visibleCards = [];
+  let navMode = 'cards'; // 'cards' | 'project'
+  let galleryImages = [];
+  let galleryTitle = '';
+  let galleryMeta = '';
 
   const refreshVisible = () => visibleCards = projectCards.filter(c => !c.classList.contains('hide'));
 
   const openLightbox = (card) => {
+    navMode = 'cards';
     refreshVisible();
     lbIndex = visibleCards.indexOf(card);
     renderLightbox();
     lightbox.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   };
+
+  const openGallery = (key, idx) => {
+    const data = window.PROJECT_GALLERIES && window.PROJECT_GALLERIES[key];
+    if (!data) return;
+    navMode = 'project';
+    galleryImages = data.images;
+    galleryTitle = data.title;
+    galleryMeta = data.meta;
+    lbIndex = idx || 0;
+    renderLightbox();
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  };
+
   const renderLightbox = () => {
-    const card = visibleCards[lbIndex];
-    if (!card) return;
-    lbImg.src = card.dataset.full;
-    lbImg.alt = card.dataset.title;
-    lbTitle.textContent = card.dataset.title;
-    lbMeta.textContent = card.dataset.meta;
+    if (navMode === 'project') {
+      const img = galleryImages[lbIndex];
+      if (!img) return;
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || galleryTitle;
+      lbTitle.textContent = galleryTitle;
+      lbMeta.textContent = `${galleryMeta} · ${lbIndex + 1}/${galleryImages.length}`;
+    } else {
+      const card = visibleCards[lbIndex];
+      if (!card) return;
+      lbImg.src = card.dataset.full;
+      lbImg.alt = card.dataset.title;
+      lbTitle.textContent = card.dataset.title;
+      lbMeta.textContent = card.dataset.meta;
+    }
   };
   const closeLightbox = () => {
     lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
   };
+  const lightboxLen = () => navMode === 'project' ? galleryImages.length : visibleCards.length;
+
   projectCards.forEach(card => card.addEventListener('click', () => openLightbox(card)));
+
+  $$('.pd-gallery').forEach(gallery => {
+    const key = gallery.dataset.project;
+    $$('[data-idx]', gallery).forEach(el => {
+      el.addEventListener('click', () => openGallery(key, parseInt(el.dataset.idx, 10) || 0));
+    });
+  });
+  $$('.action-main[data-project]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openGallery(btn.dataset.project, parseInt(btn.dataset.idx, 10) || 0);
+    });
+  });
+
   $('#lbClose')?.addEventListener('click', closeLightbox);
   lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-  $('#lbNext')?.addEventListener('click', () => { lbIndex = (lbIndex + 1) % visibleCards.length; renderLightbox(); });
-  $('#lbPrev')?.addEventListener('click', () => { lbIndex = (lbIndex - 1 + visibleCards.length) % visibleCards.length; renderLightbox(); });
+  $('#lbNext')?.addEventListener('click', () => { const len = lightboxLen(); if (!len) return; lbIndex = (lbIndex + 1) % len; renderLightbox(); });
+  $('#lbPrev')?.addEventListener('click', () => { const len = lightboxLen(); if (!len) return; lbIndex = (lbIndex - 1 + len) % len; renderLightbox(); });
   document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('is-open')) return;
     if (e.key === 'Escape') closeLightbox();
@@ -246,7 +290,7 @@
       requestAnimationFrame(raf);
     };
     raf();
-    $$('a, button, .proj-card').forEach(el => {
+    $$('a, button, .proj-card, .pd-thumb, .pd-thumb-main').forEach(el => {
       el.addEventListener('mouseenter', () => { cursor.style.width = '26px'; cursor.style.height = '26px'; cursor.style.opacity = '.6'; });
       el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; cursor.style.opacity = '1'; });
     });
