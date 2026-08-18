@@ -125,9 +125,21 @@
     counters.forEach(el => ioCount.observe(el));
   }
 
-  /* ---------------- Project filters ---------------- */
+  /* ---------------- Project filters (card grid and/or project rows) ---------------- */
   const filterBtns = $$('.filters button');
   const projectCards = $$('.proj-card');
+  const projectRows = $$('.pd-row');
+
+  const restripeRows = () => {
+    let i = 0;
+    projectRows.forEach(row => {
+      if (row.classList.contains('hide')) return;
+      row.classList.toggle('is-dark', i % 2 === 1);
+      i++;
+    });
+  };
+  restripeRows();
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -137,6 +149,11 @@
         const show = f === 'all' || card.dataset.cat === f;
         card.classList.toggle('hide', !show);
       });
+      projectRows.forEach(row => {
+        const show = f === 'all' || row.dataset.cat === f;
+        row.classList.toggle('hide', !show);
+      });
+      restripeRows();
     });
   });
 

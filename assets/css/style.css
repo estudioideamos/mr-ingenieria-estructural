@@ -453,9 +453,8 @@ svg{ display:block; }
 
 /* ---- Project detail blocks (spec sheet + gallery, pymingenieria-style) ---- */
 .pd-list{ display:flex; flex-direction:column; }
-.pd-row{ padding: clamp(48px,6vw,80px) 0; }
-.pd-row:nth-child(odd){ background: var(--c-cream); }
-.pd-row:nth-child(even){ background: #e8e4d7; }
+.pd-row{ padding: clamp(48px,6vw,80px) 0; background: var(--c-cream); }
+.pd-row.is-dark{ background: #e8e4d7; }
 .pd-block{
   display:grid; grid-template-columns: 1.05fr .95fr; gap: clamp(36px,5vw,72px); align-items:center;
 }
@@ -473,7 +472,7 @@ svg{ display:block; }
 .pd-specs small{ display:block; font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color: var(--c-body); margin-bottom:3px; }
 .pd-specs strong{ font-weight:600; font-size:15px; line-height:1.55; color: var(--c-ink); display:block; }
 .pd-actions{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
-.pd-plans{ display:flex; gap:14px; flex-wrap:wrap; }
+.pd-plans{ display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
 .pd-plan-link{
   display:inline-flex; align-items:center; gap:9px; font-size:12.5px; font-weight:700; color: var(--c-teal);
   padding:10px 16px; border-radius:999px; border:1px solid var(--c-line); transition: all .3s var(--ease);
@@ -551,6 +550,7 @@ svg{ display:block; }
 .proj-card:hover .proj-expand{ opacity:1; transform:none; }
 .proj-expand svg{ width:16px; height:16px; color:#fff; }
 .proj-card.hide{ display:none; }
+.pd-row.hide{ display:none; }
 
 /* Lightbox */
 .lightbox{
@@ -563,6 +563,11 @@ svg{ display:block; }
 .lightbox img{ max-height:74vh; margin-inline:auto; border-radius:10px; width:auto; }
 .lightbox figcaption{ color:#fff; margin-top:22px; font-family: var(--f-head); font-size:20px; }
 .lightbox figcaption small{ display:block; font-family:var(--f-body); color:var(--c-gold-light); font-size:13px; margin-top:6px; letter-spacing:.04em; }
+.lightbox-close, .lightbox-nav{
+  background: rgba(255,255,255,.1); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  transition: background .3s var(--ease), border-color .3s var(--ease);
+}
+.lightbox-close:hover, .lightbox-nav:hover{ background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.45); }
 .lightbox-close{ position:absolute; top:32px; right:var(--gutter); width:48px; height:48px; border-radius:50%; border:1px solid rgba(255,255,255,.25); display:flex; align-items:center; justify-content:center; }
 .lightbox-close svg{ width:18px; height:18px; color:#fff; }
 .lightbox-nav{ position:absolute; top:50%; transform: translateY(-50%); width:52px; height:52px; border-radius:50%; border:1px solid rgba(255,255,255,.25); display:flex; align-items:center; justify-content:center; }
