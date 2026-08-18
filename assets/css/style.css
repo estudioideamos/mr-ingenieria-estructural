@@ -238,15 +238,6 @@ svg{ display:block; }
 .hero-lead{ font-size:17.5px; line-height:1.75; color: rgba(255,255,255,.72); max-width:46ch; }
 .hero-actions{ display:flex; align-items:center; gap:30px; margin-top:30px; flex-wrap:wrap; }
 
-.hero-stats{ display:grid; grid-template-columns: repeat(4,1fr); gap:14px; margin-top:60px; }
-.hero-stats > div{
-  padding: 24px 22px 22px; border-radius: var(--radius-md); background: rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  transition: background .4s var(--ease), border-color .4s var(--ease), transform .4s var(--ease);
-}
-.hero-stats > div:hover{ background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.3); transform: translateY(-5px); }
-.hero-stats b{ display:block; font-family:var(--f-head); font-size: clamp(24px,2.4vw,32px); color:#fff; font-weight:600; line-height:1; }
-.hero-stats > div > span{ display:block; font-size:12.5px; color: rgba(255,255,255,.55); margin-top:12px; letter-spacing:.02em; line-height:1.5; padding-top:12px; border-top:1px solid rgba(255,255,255,.12); }
 
 .hero-badge{
   position:absolute; z-index:3; width:132px; height:132px; right: clamp(20px, 6vw, 120px); top: 150px;
@@ -842,7 +833,6 @@ body.nav-open .back-top-float{ opacity:0; pointer-events:none; }
   .main-nav, .header-phone{ display:none; }
   .burger{ display:flex; }
   .svc-grid{ grid-template-columns: repeat(2,1fr); }
-  .hero-stats{ grid-template-columns: repeat(2,1fr); }
   .proj-grid{ grid-template-columns: repeat(2,1fr); }
   .proj-spotlight{ grid-template-columns: 1fr; }
   .proj-spotlight-media{ min-height:320px; }
@@ -867,7 +857,6 @@ body.nav-open .back-top-float{ opacity:0; pointer-events:none; }
   .topbar-left span.hide-sm, .topbar .container > .topbar-left a:nth-child(2){ display:none; }
   .split, .why-wrap, .contact-wrap{ grid-template-columns:1fr; }
   .hero .split{ grid-template-columns:1fr; }
-  .hero-stats{ grid-template-columns: repeat(2,1fr); gap:12px; }
   .svc-grid{ grid-template-columns: 1fr; }
   .why-teaser-grid{ grid-template-columns: 1fr; }
   .proj-grid{ grid-template-columns: 1fr; }
