@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20260811d">
+<link rel="stylesheet" href="assets/css/style.css?v=20260811e">
 <link rel="canonical" href="https://estudioideamos.github.io/mr-ingenieria-estructural/proyectos.html">
 </head>
 <body data-page="proyectos">
@@ -215,22 +215,27 @@
     </div>
   </div>
 
-  <div class="container pd-list">
+  <div class="pd-list">
 
     <!-- 1. Depósito Astese -->
-    <article class="pd-block" id="proj-astese" data-reveal>
+    <article class="pd-row" id="proj-astese" data-reveal>
+      <div class="container pd-block">
       <div class="pd-media">
-        <div class="pd-gallery" data-project="astese">
-          <div class="pd-thumb-main" data-idx="0">
+        <div class="pd-carousel" data-project="astese">
+          <div class="pd-carousel-frame" data-idx="0">
             <img src="assets/img/proyectos/astese/1.jpg" alt="Depósito Astese — render exterior" loading="lazy">
             <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+            <button class="pd-carousel-arrow pd-carousel-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><use href="#ic-chevron-l"/></svg></button>
+            <button class="pd-carousel-arrow pd-carousel-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><use href="#ic-chevron-r"/></svg></button>
           </div>
-          <div class="pd-thumb-row">
-            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/astese/2.jpg" alt="Depósito Astese — modelo 3D de estructura" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/astese/3.jpg" alt="Depósito Astese — obra en construcción" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/astese/4.jpg" alt="Depósito Astese — obra en construcción" loading="lazy"></div>
+          <div class="pd-carousel-dots">
+          <button class="pd-dot is-active" data-idx="0" aria-label="Foto 1"></button>
+          <button class="pd-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button class="pd-dot" data-idx="2" aria-label="Foto 3"></button>
+          <button class="pd-dot" data-idx="3" aria-label="Foto 4"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="pd-info">
         <span class="eyebrow-mono"><span></span>Industrial</span>
@@ -248,21 +253,27 @@
           <a class="pd-plan-link" href="assets/docs/astese-plano-techo.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg>Estructura de techo (PDF)</a>
         </div>
       </div>
+    </div>
     </article>
 
     <!-- 2. Proyecto Necochea -->
-    <article class="pd-block pd-block--reverse" id="proj-necochea" data-reveal>
+    <article class="pd-row" id="proj-necochea" data-reveal>
+      <div class="container pd-block pd-block--reverse">
       <div class="pd-media">
-        <div class="pd-gallery" data-project="necochea">
-          <div class="pd-thumb-main" data-idx="0">
+        <div class="pd-carousel" data-project="necochea">
+          <div class="pd-carousel-frame" data-idx="0">
             <img src="assets/img/proyectos/necochea/1.jpg" alt="Proyecto Necochea — render exterior" loading="lazy">
             <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+            <button class="pd-carousel-arrow pd-carousel-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><use href="#ic-chevron-l"/></svg></button>
+            <button class="pd-carousel-arrow pd-carousel-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><use href="#ic-chevron-r"/></svg></button>
           </div>
-          <div class="pd-thumb-row">
-            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/necochea/2.jpg" alt="Proyecto Necochea — render exterior" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/necochea/3.jpg" alt="Proyecto Necochea — modelo 3D de estructura" loading="lazy"></div>
+          <div class="pd-carousel-dots">
+          <button class="pd-dot is-active" data-idx="0" aria-label="Foto 1"></button>
+          <button class="pd-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button class="pd-dot" data-idx="2" aria-label="Foto 3"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="pd-info">
         <span class="eyebrow-mono"><span></span>Residencial</span>
@@ -279,21 +290,27 @@
           <a class="pd-plan-link" href="assets/docs/necochea-plano-corte.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg>Corte estructural (PDF)</a>
         </div>
       </div>
+    </div>
     </article>
 
     <!-- 3. San Sebastián -->
-    <article class="pd-block" id="proj-san-sebastian" data-reveal>
+    <article class="pd-row" id="proj-san-sebastian" data-reveal>
+      <div class="container pd-block">
       <div class="pd-media">
-        <div class="pd-gallery" data-project="san-sebastian">
-          <div class="pd-thumb-main" data-idx="0">
+        <div class="pd-carousel" data-project="san-sebastian">
+          <div class="pd-carousel-frame" data-idx="0">
             <img src="assets/img/proyectos/san-sebastian/1.jpg" alt="San Sebastián Lote 237 — modelo 3D de la vivienda" loading="lazy">
             <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+            <button class="pd-carousel-arrow pd-carousel-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><use href="#ic-chevron-l"/></svg></button>
+            <button class="pd-carousel-arrow pd-carousel-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><use href="#ic-chevron-r"/></svg></button>
           </div>
-          <div class="pd-thumb-row">
-            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/san-sebastian/2.jpg" alt="San Sebastián Lote 237 — modelo 3D de estructura" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/san-sebastian/3.jpg" alt="San Sebastián Lote 237 — obra en construcción" loading="lazy"></div>
+          <div class="pd-carousel-dots">
+          <button class="pd-dot is-active" data-idx="0" aria-label="Foto 1"></button>
+          <button class="pd-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button class="pd-dot" data-idx="2" aria-label="Foto 3"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="pd-info">
         <span class="eyebrow-mono"><span></span>Residencial</span>
@@ -307,25 +324,31 @@
           <a class="action-main" data-project="san-sebastian" data-idx="0"><span>Ver galería</span><i>↗</i></a>
         </div>
       </div>
+    </div>
     </article>
 
     <!-- 4. Aula Escuela Los Arrayanes -->
-    <article class="pd-block pd-block--reverse" id="proj-arrayanes" data-reveal>
+    <article class="pd-row" id="proj-arrayanes" data-reveal>
+      <div class="container pd-block pd-block--reverse">
       <div class="pd-media">
-        <div class="pd-gallery" data-project="arrayanes">
-          <div class="pd-thumb-main" data-idx="0">
+        <div class="pd-carousel" data-project="arrayanes">
+          <div class="pd-carousel-frame" data-idx="0">
             <img src="assets/img/proyectos/arrayanes/1.jpg" alt="Aula Escuela Los Arrayanes — modelo 3D" loading="lazy">
             <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+            <button class="pd-carousel-arrow pd-carousel-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><use href="#ic-chevron-l"/></svg></button>
+            <button class="pd-carousel-arrow pd-carousel-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><use href="#ic-chevron-r"/></svg></button>
           </div>
-          <div class="pd-thumb-row">
-            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/arrayanes/2.jpg" alt="Aula Escuela Los Arrayanes — modelo 3D" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/arrayanes/3.jpg" alt="Aula Escuela Los Arrayanes — estructura metálica" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="3">
-              <img src="assets/img/proyectos/arrayanes/4.jpg" alt="Aula Escuela Los Arrayanes — detalle de conexión metálica" loading="lazy">
-              <span class="pd-thumb-more">+3</span>
-            </div>
+          <div class="pd-carousel-dots">
+          <button class="pd-dot is-active" data-idx="0" aria-label="Foto 1"></button>
+          <button class="pd-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button class="pd-dot" data-idx="2" aria-label="Foto 3"></button>
+          <button class="pd-dot" data-idx="3" aria-label="Foto 4"></button>
+          <button class="pd-dot" data-idx="4" aria-label="Foto 5"></button>
+          <button class="pd-dot" data-idx="5" aria-label="Foto 6"></button>
+          <button class="pd-dot" data-idx="6" aria-label="Foto 7"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="pd-info">
         <span class="eyebrow-mono"><span></span>Institucional</span>
@@ -339,22 +362,28 @@
           <a class="action-main" data-project="arrayanes" data-idx="0"><span>Ver galería</span><i>↗</i></a>
         </div>
       </div>
+    </div>
     </article>
 
     <!-- 5. La Colina -->
-    <article class="pd-block" id="proj-la-colina" data-reveal>
+    <article class="pd-row" id="proj-la-colina" data-reveal>
+      <div class="container pd-block">
       <div class="pd-media">
-        <div class="pd-gallery" data-project="la-colina">
-          <div class="pd-thumb-main" data-idx="0">
+        <div class="pd-carousel" data-project="la-colina">
+          <div class="pd-carousel-frame" data-idx="0">
             <img src="assets/img/proyectos/la-colina/1.jpg" alt="La Colina Lote 197 — render exterior" loading="lazy">
             <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+            <button class="pd-carousel-arrow pd-carousel-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><use href="#ic-chevron-l"/></svg></button>
+            <button class="pd-carousel-arrow pd-carousel-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><use href="#ic-chevron-r"/></svg></button>
           </div>
-          <div class="pd-thumb-row">
-            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/la-colina/2.jpg" alt="La Colina Lote 197 — render patio interno" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/la-colina/3.jpg" alt="La Colina Lote 197 — render vista aérea" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/la-colina/4.jpg" alt="La Colina Lote 197 — modelo 3D de estructura" loading="lazy"></div>
+          <div class="pd-carousel-dots">
+          <button class="pd-dot is-active" data-idx="0" aria-label="Foto 1"></button>
+          <button class="pd-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button class="pd-dot" data-idx="2" aria-label="Foto 3"></button>
+          <button class="pd-dot" data-idx="3" aria-label="Foto 4"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="pd-info">
         <span class="eyebrow-mono"><span></span>Residencial</span>
@@ -371,22 +400,28 @@
           <a class="pd-plan-link" href="assets/docs/la-colina-plano-fundacion.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg>Planta de fundación (PDF)</a>
         </div>
       </div>
+    </div>
     </article>
 
     <!-- 6. La Posta -->
-    <article class="pd-block pd-block--reverse" id="proj-la-posta" data-reveal>
+    <article class="pd-row" id="proj-la-posta" data-reveal>
+      <div class="container pd-block pd-block--reverse">
       <div class="pd-media">
-        <div class="pd-gallery" data-project="la-posta">
-          <div class="pd-thumb-main" data-idx="0">
+        <div class="pd-carousel" data-project="la-posta">
+          <div class="pd-carousel-frame" data-idx="0">
             <img src="assets/img/proyectos/la-posta/1.jpg" alt="La Posta Lote 269 — render frente" loading="lazy">
             <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+            <button class="pd-carousel-arrow pd-carousel-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><use href="#ic-chevron-l"/></svg></button>
+            <button class="pd-carousel-arrow pd-carousel-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><use href="#ic-chevron-r"/></svg></button>
           </div>
-          <div class="pd-thumb-row">
-            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/la-posta/2.jpg" alt="La Posta Lote 269 — render frente" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/la-posta/3.jpg" alt="La Posta Lote 269 — render vista aérea" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/la-posta/4.jpg" alt="La Posta Lote 269 — modelo 3D de estructura" loading="lazy"></div>
+          <div class="pd-carousel-dots">
+          <button class="pd-dot is-active" data-idx="0" aria-label="Foto 1"></button>
+          <button class="pd-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button class="pd-dot" data-idx="2" aria-label="Foto 3"></button>
+          <button class="pd-dot" data-idx="3" aria-label="Foto 4"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="pd-info">
         <span class="eyebrow-mono"><span></span>Residencial</span>
@@ -400,22 +435,28 @@
           <a class="action-main" data-project="la-posta" data-idx="0"><span>Ver galería</span><i>↗</i></a>
         </div>
       </div>
+    </div>
     </article>
 
     <!-- 7. Náutico de Escobar -->
-    <article class="pd-block" id="proj-nautico" data-reveal>
+    <article class="pd-row" id="proj-nautico" data-reveal>
+      <div class="container pd-block">
       <div class="pd-media">
-        <div class="pd-gallery" data-project="nautico">
-          <div class="pd-thumb-main" data-idx="0">
+        <div class="pd-carousel" data-project="nautico">
+          <div class="pd-carousel-frame" data-idx="0">
             <img src="assets/img/proyectos/nautico/1.jpg" alt="Náutico de Escobar Lote 29 — render exterior" loading="lazy">
             <span class="pd-gallery-expand"><svg viewBox="0 0 24 24"><use href="#ic-expand"/></svg></span>
+            <button class="pd-carousel-arrow pd-carousel-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><use href="#ic-chevron-l"/></svg></button>
+            <button class="pd-carousel-arrow pd-carousel-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><use href="#ic-chevron-r"/></svg></button>
           </div>
-          <div class="pd-thumb-row">
-            <div class="pd-thumb" data-idx="1"><img src="assets/img/proyectos/nautico/2.jpg" alt="Náutico de Escobar Lote 29 — render frente" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="2"><img src="assets/img/proyectos/nautico/3.jpg" alt="Náutico de Escobar Lote 29 — modelo 3D de estructura" loading="lazy"></div>
-            <div class="pd-thumb" data-idx="3"><img src="assets/img/proyectos/nautico/4.jpg" alt="Náutico de Escobar Lote 29 — modelo 3D de cubierta metálica" loading="lazy"></div>
+          <div class="pd-carousel-dots">
+          <button class="pd-dot is-active" data-idx="0" aria-label="Foto 1"></button>
+          <button class="pd-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button class="pd-dot" data-idx="2" aria-label="Foto 3"></button>
+          <button class="pd-dot" data-idx="3" aria-label="Foto 4"></button>
           </div>
         </div>
+      </div>
       </div>
       <div class="pd-info">
         <span class="eyebrow-mono"><span></span>Residencial</span>
@@ -429,6 +470,7 @@
           <a class="action-main" data-project="nautico" data-idx="0"><span>Ver galería</span><i>↗</i></a>
         </div>
       </div>
+    </div>
     </article>
 
   </div>
@@ -646,6 +688,6 @@ window.PROJECT_GALLERIES = {
   <svg viewBox="0 0 24 24"><use href="#ic-arrow-up"/></svg>
 </a>
 
-<script src="assets/js/main.js?v=20260811d" defer></script>
+<script src="assets/js/main.js?v=20260811e" defer></script>
 </body>
 </html>
