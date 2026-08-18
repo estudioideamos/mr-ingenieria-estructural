@@ -86,6 +86,7 @@ svg{ display:block; }
 .section-head{ max-width: 720px; margin-bottom: clamp(36px, 5vw, 64px); }
 .section-head.center{ margin-inline:auto; text-align:center; }
 .section-head h2{ font-size: clamp(32px, 4.2vw, 52px); margin-top:14px; letter-spacing:-.01em; }
+@media (min-width:640px){ .h2-nowrap{ white-space:nowrap; max-width:none; } }
 .section-head p{ margin-top:18px; font-size:17px; line-height:1.7; color: var(--c-body); }
 .section-head.on-dark h2{ color:var(--c-white); }
 .section-head.on-dark p{ color: var(--c-body-dark); }
