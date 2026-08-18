@@ -201,12 +201,36 @@
 
   projectCards.forEach(card => card.addEventListener('click', () => openLightbox(card)));
 
-  $$('.pd-gallery').forEach(gallery => {
-    const key = gallery.dataset.project;
-    $$('[data-idx]', gallery).forEach(el => {
-      el.addEventListener('click', () => openGallery(key, parseInt(el.dataset.idx, 10) || 0));
-    });
+  /* ---------------- In-place project carousels (arrows + dots) ---------------- */
+  $$('.pd-carousel').forEach(carousel => {
+    const key = carousel.dataset.project;
+    const data = window.PROJECT_GALLERIES && window.PROJECT_GALLERIES[key];
+    if (!data || !data.images.length) return;
+    const frame = $('.pd-carousel-frame', carousel);
+    const img = $('img', frame);
+    const dots = $$('.pd-dot', carousel);
+    let idx = 0;
+
+    const show = (i, animate) => {
+      idx = (i + data.images.length) % data.images.length;
+      const target = data.images[idx];
+      const apply = () => {
+        img.src = target.src;
+        img.alt = target.alt || data.title;
+        img.classList.remove('is-out');
+      };
+      if (animate) { img.classList.add('is-out'); setTimeout(apply, 180); }
+      else apply();
+      frame.dataset.idx = idx;
+      dots.forEach((d, di) => d.classList.toggle('is-active', di === idx));
+    };
+
+    $('.pd-carousel-prev', carousel)?.addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1, true); });
+    $('.pd-carousel-next', carousel)?.addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1, true); });
+    dots.forEach((d, di) => d.addEventListener('click', (e) => { e.stopPropagation(); show(di, true); }));
+    frame.addEventListener('click', () => openGallery(key, idx));
   });
+
   $$('.action-main[data-project]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -290,7 +314,7 @@
       requestAnimationFrame(raf);
     };
     raf();
-    $$('a, button, .proj-card, .pd-thumb, .pd-thumb-main').forEach(el => {
+    $$('a, button, .proj-card, .pd-carousel-frame').forEach(el => {
       el.addEventListener('mouseenter', () => { cursor.style.width = '26px'; cursor.style.height = '26px'; cursor.style.opacity = '.6'; });
       el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; cursor.style.opacity = '1'; });
     });
