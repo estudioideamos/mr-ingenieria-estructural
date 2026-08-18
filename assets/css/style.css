@@ -314,7 +314,7 @@ svg{ display:block; }
 .breadcrumb a:hover{ color: var(--c-gold-light); }
 .breadcrumb span.sep{ opacity:.5; }
 .breadcrumb span.current{ color: var(--c-gold-light); }
-.page-hero h1{ color:#fff; font-size: clamp(38px, 5.4vw, 68px); letter-spacing:-.01em; max-width:16ch; }
+.page-hero h1{ color:#fff; font-size: clamp(38px, 5.4vw, 68px); letter-spacing:-.01em; }
 .page-hero p{ margin-top:18px; font-size:16.5px; line-height:1.7; color: rgba(255,255,255,.68); max-width:52ch; }
 
 /* ============================= EYEBROW MONO / ACTION BUTTONS (editorial system) ============================= */
