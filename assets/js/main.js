@@ -283,28 +283,41 @@
     });
   });
 
-  /* ---------------- Contact form -> WhatsApp ---------------- */
-  window.sendToWhatsapp = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const nombre = form.nombre.value.trim();
-    const telefono = form.telefono.value.trim();
-    const email = form.email.value.trim();
-    const tipo = form.tipo.value;
-    const mensaje = form.mensaje.value.trim();
+  /* ---------------- Contact form (FormSubmit) ---------------- */
+  const contactForm = $('#contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+      const btn = contactForm.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.disabled = true;
+        btn.dataset.originalHtml = btn.innerHTML;
+        btn.innerHTML = 'Enviando...';
+      }
+      // let the form submit normally to FormSubmit — no preventDefault
+    });
 
-    const lines = [
-      `Hola, soy ${nombre}.`,
-      `Quiero consultar sobre un proyecto: ${tipo}.`,
-      mensaje,
-      email ? `Email: ${email}` : '',
-      telefono ? `Teléfono: ${telefono}` : ''
-    ].filter(Boolean);
-
-    const text = encodeURIComponent(lines.join('\n'));
-    window.open(`https://wa.me/5491169633168?text=${text}`, '_blank', 'noopener');
-    return false;
-  };
+    const params = new URLSearchParams(location.search);
+    if (params.get('enviado') === '1') {
+      contactForm.innerHTML = `
+        <div class="form-success">
+          <svg viewBox="0 0 24 24" width="40" height="40"><use href="#ic-check"/></svg>
+          <h3>¡Gracias! Tu consulta fue enviada.</h3>
+          <p>Te vamos a responder a la brevedad a tu email. Si es urgente, escribinos por WhatsApp.</p>
+        </div>`;
+      const url = new URL(location.href);
+      url.searchParams.delete('enviado');
+      history.replaceState({}, '', url);
+    } else if (params.get('error') === '1') {
+      const note = contactForm.querySelector('.form-note');
+      if (note) {
+        note.innerHTML = 'No pudimos enviar tu consulta. Probá de nuevo o escribinos directo por <a href="https://wa.me/5491169633168" target="_blank" rel="noopener">WhatsApp</a>.';
+        note.style.color = '#c0392b';
+      }
+      const url = new URL(location.href);
+      url.searchParams.delete('error');
+      history.replaceState({}, '', url);
+    }
+  }
 
   /* ---------------- Footer ambient glow (follows pointer) ---------------- */
   const footer = $('#siteFooter');

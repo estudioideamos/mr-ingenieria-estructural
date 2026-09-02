@@ -689,6 +689,11 @@ a.contact-item:hover .go{ opacity:1; transform:none; color: var(--c-gold-light);
 .contact-form-card .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; }
 .form-note{ font-size:12.5px; color:#909a9f; margin-top:14px; line-height:1.6; text-align:center; }
 
+.form-success{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; padding: 48px 20px; }
+.form-success svg{ color: var(--c-teal); }
+.form-success h3{ font-size:22px; }
+.form-success p{ color: var(--c-body); font-size:14.5px; line-height:1.6; max-width:36ch; }
+
 /* ============================= FOOTER ============================= */
 .site-footer{
   --footer-x: 80%; --footer-y: 0%;
