@@ -1,0 +1,33 @@
+# MR Ingeniería Estructural
+
+> Estudio de ingeniería estructural con más de 12 años de experiencia, especializado en el diseño y cálculo de estructuras de hormigón armado y estructuras metálicas para proyectos residenciales, comerciales e industriales en Buenos Aires, Argentina.
+
+MR Ingeniería Estructural acompaña a arquitectos, ingenieros, constructoras y desarrolladores en cada etapa del proyecto: desde el cálculo estructural y las memorias de cálculo hasta la documentación ejecutiva y el asesoramiento técnico durante la obra. Su premisa de trabajo es "ni un cálculo de más, ni uno de menos": estructuras seguras y eficientes, dimensionadas con el criterio justo, sin sobredimensionar ni encarecer la obra.
+
+Trabaja con software profesional de primer nivel (CypeCAD, Cype 3D, RAM Advance, Revit, AutoCAD) para el cálculo, modelado y documentación de cada proyecto.
+
+## Páginas principales
+
+- [Inicio](https://mringenieriaestructural.com.ar/): Presentación del estudio, su premisa de trabajo y resumen de servicios.
+- [Nosotros](https://mringenieriaestructural.com.ar/nosotros.html): Quiénes son, trayectoria y criterio técnico del estudio.
+- [Servicios](https://mringenieriaestructural.com.ar/servicios.html): Detalle de los seis servicios que ofrece — estructuras de hormigón armado, estructuras metálicas, hormigón con barras de PRFV, revisión y refuerzo de patologías estructurales, memorias de cálculo y documentación ejecutiva, y asesoramiento técnico.
+- [Proyectos](https://mringenieriaestructural.com.ar/proyectos.html): Portfolio de proyectos reales calculados y documentados por el estudio, residenciales, industriales e institucionales, con ficha técnica (destino, metodología constructiva, superficie construida) por proyecto.
+- [Por qué elegirnos](https://mringenieriaestructural.com.ar/por-que-elegirnos.html): Las razones que diferencian al estudio: criterio técnico consistente, documentación de calidad, eficiencia en el diseño, tecnología profesional y experiencia en proyectos de alta exigencia.
+- [Contacto](https://mringenieriaestructural.com.ar/contacto.html): Formulario de contacto, teléfono, WhatsApp y email para consultar sobre un proyecto.
+
+## Servicios
+
+- Estructuras de hormigón armado: fundaciones, losas, vigas, columnas y muros de contención para viviendas, edificios y proyectos comerciales e industriales.
+- Estructuras metálicas: naves, plataformas y soportes de equipos pesados para uso industrial y comercial.
+- Hormigón con barras de PRFV (polímero reforzado con fibra de vidrio): alternativa al acero convencional en ambientes de alta agresividad química o corrosiva, bajo normativa internacional ACI 440.
+- Revisión, refuerzo y patologías estructurales: análisis de estructuras existentes y diseño de soluciones para modificaciones, ampliaciones y refuerzos.
+- Memorias de cálculo y documentación ejecutiva: documentación técnica para aprobación municipal y ejecución en obra, incluyendo modelos estructurales BIM.
+- Asesoramiento técnico: acompañamiento a arquitectos, constructoras y desarrolladores desde la factibilidad en anteproyecto hasta consultas puntuales en obra.
+
+## Contacto
+
+- Teléfono / WhatsApp: 11-6963-3168
+- Email: contacto@mringenieriaestructural.com.ar
+- Zona de trabajo: Buenos Aires y alrededores, Argentina
+- Instagram: https://www.instagram.com/mr.ingenieria.estructural/
+- LinkedIn: https://www.linkedin.com/company/mringenieria/
