@@ -73,6 +73,15 @@ svg{ display:block; }
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+.not-found-section{
+  position:relative; min-height:100svh; display:flex; align-items:center; justify-content:center;
+  background: var(--c-ink); padding: 180px 0 100px; overflow:hidden; text-align:center;
+}
+.not-found-inner{ position:relative; z-index:1; max-width:640px; margin-inline:auto; }
+.not-found-inner h1{ color:#fff; font-size: clamp(42px,7vw,84px); margin-top:20px; letter-spacing:-.01em; }
+.not-found-inner p{ color: rgba(255,255,255,.65); font-size:17px; line-height:1.7; max-width:48ch; margin:24px auto 0; }
+.not-found-actions{ display:flex; gap:18px; justify-content:center; margin-top:44px; flex-wrap:wrap; }
+
 .eyebrow{
   display:inline-flex; align-items:center; gap:10px;
   font-family: var(--f-body); font-size: 13px; font-weight:700; letter-spacing:.18em;
@@ -775,6 +784,9 @@ a.contact-item:hover .go{ opacity:1; transform:none; color: var(--c-gold-light);
 .footer-tagline svg{ width:20px; height:20px; }
 .footer-tagline:hover{ opacity:1; color: var(--c-gold-light); }
 .footer-credit{ display:flex; align-items:center; justify-content:flex-end; gap:16px; text-align:right; }
+.footer-credit-logo{ display:inline-flex; align-items:center; vertical-align:middle; margin-left:4px; }
+.footer-credit-logo img{ display:block; opacity:.85; transition: opacity .3s var(--ease); }
+.footer-credit-logo:hover img{ opacity:1; }
 .back-top{ width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.18); display:flex; align-items:center; justify-content:center; transition: all .3s var(--ease); flex-shrink:0; }
 .back-top:hover{ background:var(--c-gold); border-color:var(--c-gold); }
 .back-top svg{ width:16px; height:16px; color:#fff; }
@@ -826,7 +838,9 @@ a.contact-item:hover .go{ opacity:1; transform:none; color: var(--c-gold-light);
   width:10px; height:10px; background: var(--c-ink);
 }
 .whatsapp-float:hover .whatsapp-tip{ opacity:1; transform: translateY(-50%) translateX(0); }
-body.nav-open .whatsapp-float{ opacity:0; pointer-events:none; }
+body.nav-open .whatsapp-float,
+body.footer-in-view .whatsapp-float,
+body.footer-in-view .back-top-float{ opacity:0; pointer-events:none; }
 @media (max-width:760px){
   .whatsapp-float{ width:52px; height:52px; right:16px; bottom:16px; }
   .whatsapp-float svg{ width:24px; height:24px; }

@@ -125,6 +125,17 @@
     counters.forEach(el => ioCount.observe(el));
   }
 
+  /* ---------------- Hide floating buttons over the footer ---------------- */
+  const siteFooter = $('#siteFooter');
+  if ('IntersectionObserver' in window && siteFooter) {
+    const ioFooter = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        document.body.classList.toggle('footer-in-view', entry.isIntersecting);
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+    ioFooter.observe(siteFooter);
+  }
+
   /* ---------------- Project filters (card grid and/or project rows) ---------------- */
   const filterBtns = $$('.filters button');
   const projectCards = $$('.proj-card');
