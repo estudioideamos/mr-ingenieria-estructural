@@ -784,7 +784,9 @@ a.contact-item:hover .go{ opacity:1; transform:none; color: var(--c-gold-light);
 .footer-tagline svg{ width:20px; height:20px; }
 .footer-tagline:hover{ opacity:1; color: var(--c-gold-light); }
 .footer-credit{ display:flex; align-items:center; justify-content:flex-end; gap:16px; text-align:right; }
-.footer-credit-logo{ display:inline-flex; align-items:center; vertical-align:middle; margin-left:4px; }
+.footer-credit-text{ display:inline; }
+.footer-credit-text i{ vertical-align:-1px; margin:0 1px; }
+.footer-credit-logo{ display:inline-flex; align-items:center; vertical-align:middle; margin-left:6px; }
 .footer-credit-logo img{ display:block; opacity:.85; transition: opacity .3s var(--ease); }
 .footer-credit-logo:hover img{ opacity:1; }
 .back-top{ width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.18); display:flex; align-items:center; justify-content:center; transition: all .3s var(--ease); flex-shrink:0; }
