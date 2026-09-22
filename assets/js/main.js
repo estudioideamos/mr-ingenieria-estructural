@@ -12,7 +12,7 @@
   let scrollCurrent = window.scrollY;
   let scrollTargetY = window.scrollY;
   let scrollRaf = null;
-  const SCROLL_EASE = 0.085; // lower = slower catch-up, smoother glide
+  const SCROLL_EASE = 0.12; // lower = slower catch-up, smoother glide
 
   const scrollLoop = () => {
     scrollCurrent += (scrollTargetY - scrollCurrent) * SCROLL_EASE;
@@ -38,7 +38,7 @@
       if (document.body.classList.contains('nav-open')) return;
       if (lightboxOpen()) return;
       e.preventDefault();
-      scrollTargetY += e.deltaY * 0.72;
+      scrollTargetY += e.deltaY * 0.85;
       scrollTargetY = Math.max(0, Math.min(scrollTargetY, maxScroll()));
       if (!scrollRaf) scrollRaf = requestAnimationFrame(scrollLoop);
     }, { passive: false });

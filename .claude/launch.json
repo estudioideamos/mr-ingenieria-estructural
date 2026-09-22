@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mr-ingenieria-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "9231"],
+      "port": 9231
+    }
+  ]
+}
