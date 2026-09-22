@@ -4,6 +4,61 @@
   const $  = (s, ctx = document) => ctx.querySelector(s);
   const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
 
+  /* ---------------- Smooth inertia scroll (wheel) ---------------- */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fineScrollAllowed = window.matchMedia('(pointer: fine)').matches && !reduceMotion;
+
+  const maxScroll = () => document.documentElement.scrollHeight - window.innerHeight;
+  let scrollCurrent = window.scrollY;
+  let scrollTargetY = window.scrollY;
+  let scrollRaf = null;
+  const SCROLL_EASE = 0.085; // lower = slower catch-up, smoother glide
+
+  const scrollLoop = () => {
+    scrollCurrent += (scrollTargetY - scrollCurrent) * SCROLL_EASE;
+    if (Math.abs(scrollTargetY - scrollCurrent) < 0.4) {
+      scrollCurrent = scrollTargetY;
+      window.scrollTo(0, scrollCurrent);
+      scrollRaf = null;
+      return;
+    }
+    window.scrollTo(0, scrollCurrent);
+    scrollRaf = requestAnimationFrame(scrollLoop);
+  };
+
+  // Jump straight there (used by nav/back-to-top clicks) — still eased, just from current position
+  const smoothScrollTo = (y) => {
+    scrollTargetY = Math.max(0, Math.min(y, maxScroll()));
+    if (!scrollRaf) scrollRaf = requestAnimationFrame(scrollLoop);
+  };
+
+  if (fineScrollAllowed) {
+    window.addEventListener('wheel', (e) => {
+      // let modals/menus with their own locked scroll behave natively
+      if (document.body.classList.contains('nav-open')) return;
+      if (lightboxOpen()) return;
+      e.preventDefault();
+      scrollTargetY += e.deltaY * 0.72;
+      scrollTargetY = Math.max(0, Math.min(scrollTargetY, maxScroll()));
+      if (!scrollRaf) scrollRaf = requestAnimationFrame(scrollLoop);
+    }, { passive: false });
+
+    // keep in sync with scrolls that don't go through our loop (keyboard, scrollbar drag, touch on hybrid devices)
+    window.addEventListener('scroll', () => {
+      if (!scrollRaf) { scrollCurrent = window.scrollY; scrollTargetY = window.scrollY; }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      scrollTargetY = Math.max(0, Math.min(scrollTargetY, maxScroll()));
+    });
+  }
+
+  // small helper so the wheel handler above can check lightbox state before it's declared further down
+  function lightboxOpen() {
+    const lb = document.getElementById('lightbox');
+    return !!lb && lb.classList.contains('is-open');
+  }
+
   /* ---------------- Year ---------------- */
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -64,7 +119,7 @@
       e.preventDefault();
       const offset = 96;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      smoothScrollTo(top);
     });
   });
 
@@ -290,7 +345,7 @@
   $$('.back-top').forEach(a => {
     a.addEventListener('click', (e) => {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      smoothScrollTo(0);
     });
   });
 
