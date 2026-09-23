@@ -946,3 +946,14 @@ body.nav-open .back-top-float{ opacity:0; pointer-events:none; }
   .page-hero{ padding-top:130px; min-height:340px; }
   .page-hero-inner{ padding-bottom:36px; }
 }
+
+/* Center the mobile hero without changing desktop or form layouts. */
+@media (max-width: 767px) {
+  .hero-inner{text-align:center}
+  .hero-inner h1,.hero-lead{margin-inline:auto}
+  .hero-actions{justify-content:center;align-items:center}
+  .hero-actions .btn{justify-content:center;min-height:44px}
+  .hero-tag{justify-content:center}
+
+  .hero .split{grid-template-columns:1fr}
+}
